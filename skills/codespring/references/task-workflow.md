@@ -19,14 +19,24 @@ codespring tasks --status todo --feature <feature-id>
 ## Execution Pattern
 
 ```bash
-# Claim the task
-codespring task start <task-id>
+# Claim the task (UUID or row number from the task list)
+codespring task start 1
 
 # Do the work using your native coding tools (Read, Edit, Bash, etc.)
 # ...
 
 # Mark complete
-codespring task done <task-id>
+codespring task done 1
+```
+
+## Creating Tasks
+
+```bash
+# Create a task with all options
+codespring task create --title "Fix login redirect" --priority high --feature <feature-id> --estimate "2h"
+
+# Simple task
+codespring task create --title "Update README"
 ```
 
 ## Multi-Task Batch Workflow

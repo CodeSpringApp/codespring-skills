@@ -5,7 +5,7 @@ description: >
   work with CodeSpring projects, tasks, PRDs, mindmaps, or analyze a codebase
   for project planning. Handles workspace selection, project linking, task
   management, and syncing findings to CodeSpring.
-allowed-tools: Bash(codespring:*) Bash(npx @codespring/cli:*)
+allowed-tools: Bash(codespring:*) Bash(npx @codespring-app/cli:*)
 metadata:
   author: codespring
   version: "1.0"
@@ -17,7 +17,7 @@ Manage project planning: workspaces, projects, tasks, PRDs, and mindmaps.
 
 ## Prerequisites
 
-- **CLI installed**: `npm i -g @codespring/cli` or use `bunx @codespring/cli`
+- **CLI installed**: `npm i -g @codespring-app/cli` or use `npx @codespring-app/cli`
 - **Authenticated**: Run `codespring auth status` to check. Login with `codespring auth login`.
 - **Project linked**: Check for `.codespring/config.json` or run `codespring init`.
 
@@ -39,25 +39,32 @@ codespring tasks --status todo
 | Command | Purpose |
 |---------|---------|
 | `codespring workspaces` | List available workspaces |
-| `codespring projects [--org ID]` | List projects in a workspace |
+| `codespring projects [--org ID]` | List projects |
+| `codespring project create --name <n>` | Create a new project |
 | `codespring features` | List features for linked project |
+| `codespring feature create --title <t>` | Create a feature |
 | `codespring tasks [--status S] [--feature ID]` | List tasks with filters |
+| `codespring task create --title <t> [--priority P]` | Create a task |
 | `codespring task start <id>` | Mark task as in_progress |
 | `codespring task done <id>` | Mark task as done |
-| `codespring prds` | List PRDs by feature structure |
+| `codespring task update <id> --status <s>` | Update task fields |
+| `codespring prds` | List PRDs by feature |
 | `codespring prd <id>` | Get full PRD content |
 | `codespring prd sync <id> --file <path>` | Update PRD from file |
 | `codespring mindmap` | Get mindmap structure |
+| `codespring mindmap set-info --title <t>` | Update project info node |
 | `codespring mindmap tech-stack --add '<json>'` | Sync tech stack |
 | `codespring mindmap features --add '<json>'` | Sync features |
 | `codespring mindmap note <featureId> --text '...'` | Add feature notes |
 | `codespring schema` | Data schema reference |
 | `codespring node-types` | Mindmap node type reference |
 
+**Note:** Task IDs can be UUIDs or row numbers (e.g., `task start 1` picks the first task from the list).
+
 ## Output
 
-All commands output JSON. Add `--pretty` for human-readable formatting.
-Use `--help` on any command for full options.
+All commands default to markdown in terminals, JSON when piped.
+Add `--json` to force JSON, `--pretty` for formatted JSON, `--md` for markdown.
 
 ## Agentic Task Workflow
 
@@ -65,13 +72,16 @@ Use `--help` on any command for full options.
 # 1. Find available work
 codespring tasks --status todo
 
-# 2. Claim a task
-codespring task start <task-id>
+# 2. Claim a task (UUID or row number)
+codespring task start 1
 
 # 3. Do the work using your coding tools
 
 # 4. Mark done
-codespring task done <task-id>
+codespring task done 1
+
+# Or create a new task
+codespring task create --title "Fix login bug" --priority high
 ```
 
 ## Syncing Codebase Analysis

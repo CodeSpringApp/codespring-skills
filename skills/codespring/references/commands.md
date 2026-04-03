@@ -37,8 +37,18 @@ List all workspaces (personal + organizations). No flags.
 List projects in a workspace.
 - `--org <id>` — Filter by organization ID
 
+### `codespring project create`
+Create a new project.
+- `--name <n>` — Project name (required)
+- `--description <d>` — Project description
+
 ### `codespring features`
 List features for the linked project. Requires linked project.
+
+### `codespring feature create`
+Create a new feature for the linked project.
+- `--title <t>` — Feature title (required)
+- `--description <d>` — Feature description
 
 ## Tasks
 
@@ -48,11 +58,19 @@ List tasks with optional filters.
 - `--feature <id>` — Filter by feature ID
 - `--priority <p>` — Filter: `low`, `medium`, `high`, `urgent`
 
+### `codespring task create`
+Create a new task for the linked project.
+- `--title <t>` — Task title (required)
+- `--description <d>` — Task description
+- `--priority <p>` — Priority: `low`, `medium`, `high`, `urgent`
+- `--feature <id>` — Link to a feature ID
+- `--estimate <e>` — Estimate (e.g., "2h", "1d")
+
 ### `codespring task start <id>`
-Set task status to `in_progress`.
+Set task status to `in_progress`. Accepts UUID or row number.
 
 ### `codespring task done <id>`
-Set task status to `done`.
+Set task status to `done`. Accepts UUID or row number.
 
 ### `codespring task update <id>`
 Update task fields.
@@ -81,6 +99,12 @@ Update PRD content.
 ### `codespring mindmap`
 Get full mindmap structure (nodes + edges) for the linked project.
 
+### `codespring mindmap set-info`
+Update the project info node in the mindmap.
+- `--title <t>` — Project title
+- `--description <d>` — Project description
+- `--github <url>` — GitHub repository URL
+
 ### `codespring mindmap tech-stack`
 Update the tech stack node.
 - `--add '<json>'` — JSON array of items: `[{"id":"tech-react","title":"React","description":"Frontend"}]`
@@ -106,6 +130,8 @@ Output mindmap node type definitions (primary, secondary, bridge, tertiary, hand
 
 ## Global Flags
 
+- `--md` — Force markdown output (default in terminal)
+- `--json` — Force JSON output (default when piped)
 - `--pretty` — Pretty-print JSON output
 - `--help`, `-h` — Show help
 - `--version`, `-v` — Show version
