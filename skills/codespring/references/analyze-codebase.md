@@ -89,8 +89,10 @@ For each core feature capture:
 - **Data model** — tables/collections, key columns, enums, relationships; what's read vs written.
 - **Server actions / services / queries** — the reusable functions that already exist (new features should call these, not re-implement them).
 - **Security** — authn/authz, ownership checks, input validation, secrets/keys, row-level security, webhook signature verification.
+- **Shared backend systems** (call these out explicitly — new features collide with them): hosting/deploy target (AWS, Vercel…) and platform limits; crediting/usage metering; payment, subscription, and **refund** systems; background **jobs / pipelines / queues / cron**; storage — **S3 conventions / buckets**, file paths, signed-URL patterns; media/render pipelines (e.g. Remotion/video compositions); databases + migrations; **auth and row-level security (RLS)**; **environment variable names** to reuse; webhooks + signature verification.
 - **External services & env vars** — every integration and the env vars it needs.
-- **Infra & gotchas** — hosting, request timeouts/limits, async or polling jobs, cron/queues (or their absence), storage buckets, rate/credit logic, hardcoded hosts, orphan/misnamed routes.
+- **Infra & gotchas** — request timeouts/limits, async or polling jobs, hardcoded hosts, rate/credit logic, orphan/misnamed routes.
+- **Dependency / break-risk map** — what depends on this feature's code, so a future change doesn't silently break another feature.
 
 ## 9. Frontend depth (feeds the note + Frontend PRD)
 

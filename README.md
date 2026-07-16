@@ -39,9 +39,13 @@ It carries the canonical `references/` (commands, task-workflow, analyze-codebas
 ### Specialist skills
 
 - **`cs-getting-started`** — connects the agent to CodeSpring, then routes you: design a new project from scratch, or import an existing codebase.
-- **`cs-import-codebase`** — reads your real code and maps it into CodeSpring (core features, sub-features, notes) with generated Frontend + Backend PRDs.
-- **`cs-create-prd`** — pick a feature and generate a Frontend, Backend, or Both PRD, deep-dived from the code and attached to the feature.
-- **`cs-create-tasks`** — turn PRDs/features into an ordered Kanban task list.
+- **`cs-import-codebase`** — reads your real code and maps it into CodeSpring (core features, sub-features, notes), generates Frontend + Backend PRDs, then runs an independent read-only audit of code vs map.
+- **`cs-create-prd`** — pick a feature and generate a Frontend, Backend, or Both PRD, deep-dived from the code (incl. shared backend systems) and attached to the feature.
+- **`cs-create-tasks`** — turn a feature's PRDs into a numbered, prioritized, parallel-safe Kanban task list.
+- **`cs-build-feature`** — interactive build: checks readiness, then works the tasks (up to 5 parallel sub-agents) with guards against breaking existing features.
+- **`cs-resync-codebase`** — after building, checks whether CodeSpring is stale vs the real code and updates the map (read-only on your code).
+
+Also: `claude-templates/` — agnostic `CLAUDE.md` starters by app type (web / iOS / macOS). See [`SKILLS.md`](SKILLS.md) for status and roadmap.
 
 ## Usage
 
