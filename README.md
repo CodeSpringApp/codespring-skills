@@ -23,26 +23,41 @@ codespring auth login
 
 ## What's included
 
-### `codespring` skill
+One command installs the whole pack. It's organized as a core knowledge skill plus task-specific specialists (see [`SKILLS.md`](SKILLS.md) for the status tracker).
 
-Teaches your AI agent to manage CodeSpring projects:
+### `codespring` — the core skill
+
+Teaches your AI agent how CodeSpring works and how to drive the CLI:
 
 - **Tasks** — List, start, complete tasks from the Kanban board
-- **PRDs** — Read and sync product requirement documents
-- **Mindmaps** — Update tech stack, features, and notes
+- **PRDs** — Read, sync, and (via the specialists) generate product requirement documents
+- **Mindmaps** — Update tech stack, features, notes, and PRD bridge nodes
 - **Projects** — Link directories, list workspaces and projects
+
+It carries the canonical `references/` (commands, task-workflow, analyze-codebase, mindmap-structure, prd-management, pitfalls) that the specialists build on.
+
+### Specialist skills
+
+- **`cs-getting-started`** — connects the agent to CodeSpring, then routes you: design a new project from scratch, or import an existing codebase.
+- **`cs-import-codebase`** — reads your real code and maps it into CodeSpring (core features, sub-features, notes) with generated Frontend + Backend PRDs.
+- **`cs-create-prd`** — pick a feature and generate a Frontend, Backend, or Both PRD, deep-dived from the code and attached to the feature.
+- **`cs-create-tasks`** — turn PRDs/features into an ordered Kanban task list.
 
 ## Usage
 
-After installing the skill, your agent will automatically use CodeSpring when relevant. You can also invoke it directly:
+After installing, your agent uses the skills automatically when relevant. You can also invoke one directly:
 
 ```bash
 # In Claude Code
+/cs-getting-started
+/cs-import-codebase
+/cs-create-prd
 /codespring
 
 # Or just ask your agent
+"import my codebase into codespring"
+"create a backend PRD for the billing feature"
 "list my codespring tasks"
-"sync the tech stack to codespring"
 ```
 
 ## Links

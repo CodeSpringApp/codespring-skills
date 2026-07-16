@@ -99,10 +99,24 @@ codespring mindmap features --add '[{"title":"Authentication","description":"Use
 codespring mindmap note feature-auth --text "Uses OAuth2 with PKCE flow..."
 ```
 
+## Generating PRDs
+
+The CLI reads and syncs PRDs; it does not yet generate them. PRD generation and attaching PRD nodes to the canvas is a direct API call the CodeSpring app uses — see [prd-management.md](references/prd-management.md) and [mindmap-structure.md](references/mindmap-structure.md). The `cs-create-prd` skill wraps this end-to-end.
+
 ## Detailed References
 
 - [commands.md](references/commands.md) — Full CLI reference with all flags
 - [task-workflow.md](references/task-workflow.md) — Agentic task execution patterns
-- [analyze-codebase.md](references/analyze-codebase.md) — Codebase analysis checklist
-- [mindmap-structure.md](references/mindmap-structure.md) — Mindmap data formats and node types
-- [prd-management.md](references/prd-management.md) — PRD export and sync workflows
+- [analyze-codebase.md](references/analyze-codebase.md) — Codebase analysis checklist (stack detection + deep feature/backend/frontend passes)
+- [mindmap-structure.md](references/mindmap-structure.md) — Mindmap data formats and node types (incl. PRD bridge nodes)
+- [prd-management.md](references/prd-management.md) — PRD read/sync + generate/attach/dedupe
+- [pitfalls.md](references/pitfalls.md) — Failure modes & guardrails (wrong-project, flattening, duplicate PRDs)
+
+## Related skills
+
+This `codespring` skill is the shared knowledge base (how CodeSpring works + the CLI). The task-specific skills build on it:
+
+- `cs-getting-started` — connect the agent to CodeSpring, then route to the right journey (new-from-scratch vs import).
+- `cs-import-codebase` — map an existing repo into CodeSpring and generate PRDs.
+- `cs-create-prd` — generate a Frontend/Backend PRD for a chosen feature.
+- `cs-create-tasks` — turn PRDs/features into a task list.
