@@ -21,6 +21,15 @@ npm i -g @codespring-app/cli
 codespring auth login
 ```
 
+## Which skill do I run?
+
+**[`JOURNEYS.md`](JOURNEYS.md)** — the two journeys and what runs in each:
+
+- **They have an idea** → `cs-plan-app` → `cs-ui-mockup` → `cs-create-prd` → `cs-create-tasks` → `cs-handoff` → they build
+- **They have a codebase** → `cs-audit-codebase` → `cs-import-codebase` → `cs-create-prd` → `cs-create-tasks` → `cs-handoff` → they build
+
+Unsure? Run **`cs-getting-started`** — it detects where the project is and names one next step.
+
 ## What's included
 
 One command installs the whole pack. It's organized as a core knowledge skill plus task-specific specialists (see [`SKILLS.md`](SKILLS.md) for the status tracker).

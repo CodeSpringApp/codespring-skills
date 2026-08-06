@@ -5,10 +5,10 @@ description: >
   work with CodeSpring projects, tasks, PRDs, mindmaps, or analyze a codebase
   for project planning. Handles workspace selection, project linking, task
   management, and syncing findings to CodeSpring.
-allowed-tools: Bash(codespring:*) Bash(npx @codespring-app/cli:*)
+allowed-tools: Bash(codespring:*) Bash(npx @codespring-app/cli:*) Bash(bash:*) Bash(node:*)
 metadata:
   author: codespring
-  version: "1.0"
+  version: "1.1"
 ---
 
 # CodeSpring CLI
@@ -103,24 +103,39 @@ codespring mindmap note feature-auth --text "Uses OAuth2 with PKCE flow..."
 
 The CLI reads and syncs PRDs; it does not yet generate them. PRD generation and attaching PRD nodes to the canvas is a direct API call the CodeSpring app uses — see [prd-management.md](references/prd-management.md) and [mindmap-structure.md](references/mindmap-structure.md). The `cs-create-prd` skill wraps this end-to-end.
 
+## Scripts — run the checks, don't eyeball them
+
+**A check is a script; a judgement is prose.** Anything that must give the same answer every run lives in `scripts/`, read-only, writing nothing to the project or the repo:
+
+```bash
+bash scripts/fetch-project.sh --out /tmp/cs-state   # snapshot the linked project's JSON; prints the projectId
+node scripts/state.mjs        /tmp/cs-state         # the one-line state summary + booleans and counts
+node scripts/check-map.mjs    /tmp/cs-state [--expect-core N]   # map quality + post-write verification
+```
+
+`check-map.mjs` settles the core-feature count, duplicate titles, sub-features flattened to top level, missing notes, duplicate PRDs and unlinked tasks; exit 1 = a real failure, 2 = warnings only. Whether the map is *good* — sidebar-level features, verbs for sub-features, one-sentence card descriptions — stays a judgement and stays in prose. `cs-audit-codebase/scripts/check-repo.sh` does the same for the git/delivery reality.
+
 ## Detailed References
 
+- [project-state.md](references/project-state.md) — **Start here.** State detection so any skill can be entered from anywhere; **the five questions that decide whether code is worth building on**; the Understand → Plan → Build stages and the seam between them; the map-quality caveat and the two-projects case; the quick health smell test
+- [auditing-and-fixing.md](references/auditing-and-fixing.md) — The audit → verdict → map → tasks pipeline; where audit errors actually come from (the orchestrator's own summarising); the moving-target/git reality; why the map shows the target; the rebuild-vs-fix decision table **and the has-users gate**; the defect categories worth hunting; scope discipline (problems / could-add-later / not-worth-adding) and where future ideas live; plain-language rules; idempotency + verification; FERB edge cases
 - [commands.md](references/commands.md) — Full CLI reference with all flags
 - [task-workflow.md](references/task-workflow.md) — Agentic task execution patterns
-- [analyze-codebase.md](references/analyze-codebase.md) — Codebase analysis checklist (stack detection + deep feature/backend/frontend passes)
+- [analyze-codebase.md](references/analyze-codebase.md) — Codebase analysis checklist (stack detection + deep feature/backend/frontend passes; choosing the smallest core-feature set)
 - [mindmap-structure.md](references/mindmap-structure.md) — Mindmap data formats and node types (incl. PRD bridge nodes)
 - [prd-management.md](references/prd-management.md) — PRD read/sync + generate/attach/dedupe
-- [pitfalls.md](references/pitfalls.md) — Failure modes & guardrails (wrong-project, flattening, duplicate PRDs)
+- [pitfalls.md](references/pitfalls.md) — Failure modes & guardrails (not checking what exists, wrong-project, flattening, duplicate PRDs, `features --replace` appending, no project delete/move)
 
 ## Related skills
 
-This `codespring` skill is the shared knowledge base (how CodeSpring works + the CLI). The task-specific skills build on it:
+This `codespring` skill is the shared knowledge base (how CodeSpring works + the CLI). The task-specific skills build on it. **Every one of them detects the project's real state on entry** (`project-state.md`), so it does not matter which the user invokes:
 
-- `cs-getting-started` — connect the agent to CodeSpring, then route to the right journey (new-from-scratch vs import).
-- `cs-import-codebase` — map an existing repo into CodeSpring, generate PRDs, and run an independent audit.
+- `cs-getting-started` — connect, report where the project actually is, and name the single next step. Routes on two questions: **is there code**, and **does it do the job** (the five questions in `project-state.md` — never "do we trust it").
+- `cs-audit-codebase` — diagnose a codebase that isn't doing its job (run it, parallel specialists, git/CI audit), write a plain-English `FINDINGS.md`, and give a rebuild-or-fix-in-place verdict.
+- `cs-import-codebase` — map a repo into CodeSpring. With an audit it builds the corrected target map and findings-derived tasks; without one it documents what exists. Owns the map-quality ladder and the node model.
 - `cs-create-prd` — generate a Frontend/Backend PRD for a chosen feature (the single source of truth for PRD creation).
 - `cs-create-tasks` — turn a feature's PRDs into a numbered, parallel-safe task list.
 - `cs-build-feature` — interactive build orchestrator (readiness checks → up to 5 sub-agents → break-risk guards).
-- `cs-resync-codebase` — keep CodeSpring in sync with the built code (read-only on code).
+- `cs-resync-codebase` — keep CodeSpring in sync with the built code (read-only on code). This is what makes a target map describe reality again once the tasks are done.
 
 See `references/codespring-docs.md` for guiding users through web-app-only steps, and `claude-templates/` (repo root) for per-platform `CLAUDE.md` starters.
