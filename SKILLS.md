@@ -18,6 +18,7 @@ Working tracker for the CodeSpring skill pack. `npx skills add CodeSpringApp/cod
 | `cs-create-tasks` | specialist | draft | 0.2 | Feature → numbered, prioritized, parallel-safe Kanban tasks with reuse/don't-break notes. |
 | `cs-build-feature` | specialist | draft | 0.1 | Interactive build: readiness check → tasks → build (up to 5 sub-agents) with break-risk guards. |
 | `cs-resync-codebase` | specialist | draft | 0.1 | Read-only-on-code staleness check; updates CodeSpring to match the built code. |
+| `cs-market-research` | specialist | draft | 0.1 | Research an idea, identify the real wedge, and sync only the justified plan to CodeSpring. |
 
 ## References (inside `skills/codespring/references/`)
 

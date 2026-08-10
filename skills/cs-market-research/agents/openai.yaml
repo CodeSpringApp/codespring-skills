@@ -1,0 +1,4 @@
+interface:
+  display_name: "Market Research"
+  short_description: "Validate a product idea before planning"
+  default_prompt: "Use $cs-market-research to assess this idea before we plan it in CodeSpring."
