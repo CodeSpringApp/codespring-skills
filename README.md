@@ -44,6 +44,7 @@ It carries the canonical `references/` (commands, task-workflow, analyze-codebas
 - **`cs-create-tasks`** — turn a feature's PRDs into a numbered, prioritized, parallel-safe Kanban task list.
 - **`cs-build-feature`** — interactive build: checks readiness, then works the tasks (up to 5 parallel sub-agents) with guards against breaking existing features.
 - **`cs-resync-codebase`** — after building, checks whether CodeSpring is stale vs the real code and updates the map (read-only on your code).
+- **`cs-seo-website`** — operates CodeSpring marketing-site technical SEO, the Search Console-to-content loop, Vibe Code Library publishing gates and vetted product listings.
 
 Also: `claude-templates/` — agnostic `CLAUDE.md` starters by app type (web / iOS / macOS). See [`SKILLS.md`](SKILLS.md) for status and roadmap.
 
