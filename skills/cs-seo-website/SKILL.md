@@ -27,20 +27,24 @@ Never promise a DR/ranking result or buy/mass-submit links designed chiefly to m
 
 ## Branch and release model
 
-- `main`: verified production only.
-- `dev`: next integration/deployment candidate.
-- `feat/codespring-vibe-code-library`: all library hub, category and app-page work.
-- `fix/seo-*`: isolated technical SEO corrections, created from the current `origin/dev`.
-- `feat/seo-*`: scoped new SEO content/features, created from the current `origin/dev` unless it belongs in the Vibe Code Library.
+Read the website repository `AGENTS.md` first. It is the operating contract and wins over this skill.
 
-Do not commit directly to `main` or call branch/dev work live. Use a separate worktree before editing so other agents’ checkouts are not switched or overwritten.
+- `main`: live branch and the only branch permitted to change shared SEO files such as `app/sitemap.ts`, `app/robots.ts`, `app/layout.tsx`, `lib/site-links.ts`, `templates/` and `docs/*.md`.
+- `blog`: only `app/blog/**`, `content/blog/**` and `public/blog/**`.
+- `library`: only Vibe Code Library-owned paths.
+- `docs`: only docs route/component paths.
+- `marketing`: only marketing-owned paths.
+
+Never recreate `dev`, never use an ad hoc `fix/seo-*` branch in the website repository, and never commit or push directly to `main`. Each area branch is cut from `origin/main`, keeps one draft PR into `main`, and begins every session by merging `origin/main` before any edits. A required shared SEO change is a separate, small main-only PR for human review.
 
 ```bash
 git fetch origin --prune
-git worktree add -b fix/seo-example ../codespring-seo-example origin/dev
+git switch blog  # or library, docs or marketing
+git merge origin/main
+git status --short --branch
 ```
 
-Open a **draft PR to `dev`**. Promote with a separate `dev` → `main` PR after deployment review. Run `npm run type-check` and `npm run build`, push, and verify the remote SHA before reporting completion.
+For a new area branch that does not yet exist, create it from `origin/main` exactly as `AGENTS.md` instructs. Run `npx tsc --noEmit`, `rm -rf .next out && npm run build` and `node --test tests/*.mjs`; if an unchanged baseline test fails, report it exactly and do not claim the full suite passed. Push and verify the remote SHA before reporting completion.
 
 ## 1. Technical SEO baseline
 
@@ -61,10 +65,11 @@ Acceptance test after a production deployment:
 
 ```bash
 curl -sSIL https://codespring.app/
-curl -sSI https://www.codespring.app/robots.txt
-curl -sSI https://www.codespring.app/sitemap.xml
-curl -sS https://www.codespring.app/robots.txt
-curl -sS https://www.codespring.app/sitemap.xml
+curl -sSIL https://www.codespring.app/     # expect 301 to the matching bare-host URL
+curl -sSI https://codespring.app/robots.txt
+curl -sSI https://codespring.app/sitemap.xml
+curl -sS https://codespring.app/robots.txt
+curl -sS https://codespring.app/sitemap.xml
 ```
 
 ## 2. Search Console → content loop
