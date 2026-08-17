@@ -19,6 +19,7 @@ Working tracker for the CodeSpring skill pack. `npx skills add CodeSpringApp/cod
 | `cs-build-feature` | specialist | draft | 0.1 | Interactive build: readiness check → tasks → build (up to 5 sub-agents) with break-risk guards. |
 | `cs-resync-codebase` | specialist | draft | 0.1 | Read-only-on-code staleness check; updates CodeSpring to match the built code. |
 | `cs-market-research` | specialist | draft | 0.1 | Research an idea, identify the real wedge, and sync only the justified plan to CodeSpring. |
+| `cs-website-foundation` | marketing | draft | 0.1 | Page inventory, proof map and a founder-facing NOW/NEXT/LATER/BLOCKED website workboard. |
 
 ## References (inside `skills/codespring/references/`)
 

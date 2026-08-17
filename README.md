@@ -45,6 +45,7 @@ It carries the canonical `references/` (commands, task-workflow, analyze-codebas
 - **`cs-build-feature`** — interactive build: checks readiness, then works the tasks (up to 5 parallel sub-agents) with guards against breaking existing features.
 - **`cs-resync-codebase`** — after building, checks whether CodeSpring is stale vs the real code and updates the map (read-only on your code).
 - **`cs-market-research`** — researches direct competitors and open-source alternatives before planning, then records whether to adopt, integrate, or build a defensible wedge.
+- **`cs-website-foundation`** — creates the app's page inventory, proof map and founder-facing NOW/NEXT/LATER/BLOCKED website workboard. It is the first reusable marketing skill; SEO/AEO and content operations follow as focused skills.
 
 Also: `claude-templates/` — agnostic `CLAUDE.md` starters by app type (web / iOS / macOS). See [`SKILLS.md`](SKILLS.md) for status and roadmap.
 

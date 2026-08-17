@@ -1,0 +1,3 @@
+url,page_type,audience,job_to_be_done,primary_cta,proof_or_source,owner,status,dependency,success_metric,next_action,review_date
+/,product,[buyer],[job],[CTA],[source],[owner],DRAFT,[dependency],[metric],[action],YYYY-MM-DD
+/resources/guides/[slug],guide,[reader],[question],[CTA],[source],[owner],DRAFT,[dependency],[metric],[action],YYYY-MM-DD
