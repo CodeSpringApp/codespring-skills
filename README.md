@@ -23,7 +23,7 @@ codespring auth login
 
 ## What's included
 
-One command installs the whole pack. It's organized as a core knowledge skill plus task-specific specialists (see [`SKILLS.md`](SKILLS.md) for the status tracker).
+One command installs the whole pack. It's organized as a core knowledge skill plus task-specific specialists (see [`SKILLS.md`](SKILLS.md) for the status tracker). The productized, end-to-end CodeSpring + Ferb roadmap is in [`docs/skill-suite-vision.md`](docs/skill-suite-vision.md).
 
 ### `codespring` — the core skill
 

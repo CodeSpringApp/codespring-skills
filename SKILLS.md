@@ -39,6 +39,12 @@ Working tracker for the CodeSpring skill pack. `npx skills add CodeSpringApp/cod
 ## What "needs update" means here
 Track staleness here. When the CLI adds a real `prd generate`/`prd create` command (today it's an API workaround), update `prd-management.md` + the specialists and drop the direct-API steps. Same when sub-feature notes, spec-documents, or task-linking to sub-features become first-class.
 
+## Productized operating model
+
+The skills are being expanded from CodeSpring planning into a dogfooded, end-to-end operating system for software companies: market decision → product planning → Ferb build → deploy/security/operations → offer → website foundation → SEO/AEO → content, carousel, and eventually video production. See [`docs/skill-suite-vision.md`](docs/skill-suite-vision.md) for the customer lifecycle, quality/approval rules, delivery-status language, and staged roadmap.
+
+The first marketing capability should be **`cs-website-foundation`**, which maintains the site/page inventory and a founder-facing **NOW / NEXT / LATER / BLOCKED** workboard. It should be followed by general-purpose `cs-seo-setup`, then `cs-aeo-content` and `cs-content-operations`; avoid an oversized catch-all SEO skill.
+
 ## Backlog / to revisit
 - **`cs-setup-github`** — teach the branch workflow (main / dev / feature branches) and repo setup so users get everything configured. (Requested; deferred as potentially complex.)
 - **`cs-describe-feature`** / **`cs-visualize`** — interactive new-feature design; auto-map from a repo (both listed "upcoming" on the docs page).
