@@ -20,6 +20,7 @@ Working tracker for the CodeSpring skill pack. `npx skills add CodeSpringApp/cod
 | `cs-build-feature` | build | draft | 0.1 | Readiness-check and execute CodeSpring build tasks without breaking shared systems. |
 | `cs-build-resync-codebase` | build | draft | 0.1 | Re-sync CodeSpring plans with the real code after building. |
 | `cs-marketing-research` | marketing | draft | 0.1 | Research market demand, alternatives, positioning, and a defensible wedge before committing work. |
+| `cs-marketing-offer-creation` | marketing | draft | 0.1 | Tear down competitor offers in the Meta Ad Library, then specify a front-end offer, order bumps, and back end from that evidence. |
 | `cs-marketing-website` | marketing | dogfooding | 0.1 | Build and maintain the page inventory, proof map, conversion paths, and founder-facing NOW/NEXT/LATER/BLOCKED website workboard. |
 
 ## References (inside `skills/codespring/references/`)
