@@ -25,7 +25,7 @@ Do not design skills around tool usage alone. Design them around a completed bus
 
 Use lifecycle-family names for every new installable capability: `cs-<family>-<outcome>` (for example, `cs-marketing-seo` and `cs-build-feature`). The published installation surface remains flat in `skills/` until the exact default installer command has been smoke-tested against a nested package. This avoids discovering too late that a customer installation skipped a nested skill.
 
-The source system is still categorised from day one: `SKILLS.md` records family, audience (`customer`, `internal`, or `shared`), maturity, owner, and handoff; [`docs/skill-governance-sop.md`](skill-governance-sop.md) is the mandatory routing and authoring SOP; and `AGENTS.md` makes it automatic for agents editing the repository. Use the core `codespring` skill for shared CodeSpring mechanics and references; specialist skills own one customer outcome and link to the shared core rather than duplicating it.
+The source system is categorised from day one: `SKILLS.md` records family and maturity; [`docs/skill-governance-sop.md`](skill-governance-sop.md) is the mandatory routing and authoring SOP; and `AGENTS.md` makes it automatic for agents editing the repository. Use the core `codespring` skill for shared CodeSpring mechanics and references; specialist skills own one customer outcome and link to the shared core rather than duplicating it.
 
 Use `docs/` for cross-cutting operating models, lifecycle maps, templates, acceptance criteria, and skill roadmaps. This preserves a small, discoverable installation surface while allowing a coherent marketing or operations system to span multiple specialist skills.
 
@@ -35,17 +35,17 @@ Use `docs/` for cross-cutting operating models, lifecycle maps, templates, accep
 
 **Outcome:** choose a credible customer, problem, wedge, and commercial angle before committing build effort.
 
-- `cs-market-research` — competitors, substitutes, platform reality, defensible wedge, and a build/adopt/do-not-build decision.
+- `cs-marketing-research` — competitors, substitutes, platform reality, demand evidence, positioning, and a build/adopt/do-not-build decision.
 - Future: offer/customer research — interview synthesis, ICP selection, demand evidence, pricing hypotheses, and offer framing.
 
 ### 2. Product planning in CodeSpring
 
 **Outcome:** a scoped build plan that a coding agent can safely execute.
 
-- `cs-getting-started`
-- `cs-import-codebase`
-- `cs-create-prd`
-- `cs-create-tasks`
+- `cs-build-getting-started`
+- `cs-build-import-codebase`
+- `cs-build-create-prd`
+- `cs-build-create-tasks`
 - Future: positioning-to-PRD handoff and design/UX specification.
 
 ### 3. Build with Ferb
@@ -59,7 +59,7 @@ Use `docs/` for cross-cutting operating models, lifecycle maps, templates, accep
 
 **Outcome:** a production-ready application with a verified release, known risks, and ownership of recurring operations.
 
-- `cs-resync-codebase` — CodeSpring reflects the actual built state.
+- `cs-build-resync-codebase` — CodeSpring reflects the actual built state.
 - Future: deployment readiness, security audit, observability, incident/release checks, backup/recovery, and cost/usage review.
 
 Security and deployment skills must fail closed: identify the environment, authority, affected data, approval needed, and verification method before mutation. They must never convert an unverified local pass into a claim that production is secure or live.
@@ -71,10 +71,10 @@ Security and deployment skills must fail closed: identify the environment, autho
 Create separate specialist skills rather than one oversized "SEO" skill:
 
 - Future: `cs-offer-creation` — ICP, problem, promise, proof, packaging, pricing hypothesis, objections, landing-page brief, and conversion measurement.
-- Future: `cs-website-foundation` — information architecture, page inventory, purpose of every page, conversion paths, analytics, technical website baseline, and an explicit now/next/later workboard.
-- Future: `cs-seo-setup` — crawlability, metadata, canonicals, robots, sitemap, Search Console/analytics access, indexation baseline, keyword/query backlog, internal-link plan, and a measurement cadence.
-- Future: `cs-aeo-content` — answer-engine-friendly source-backed pages, structured Q&A where genuinely useful, clear entity/product information, original evidence, and conversion paths. It must avoid empty "AEO hacks" or schema spam.
-- Future: `cs-content-operations` — Search Console-to-content loop, briefs, editorial calendar, quality gate, publish/review cycle, and status reporting.
+- `cs-marketing-website` — information architecture, page inventory, purpose of every page, conversion paths, analytics, technical website baseline, and an explicit now/next/later workboard.
+- Future: `cs-marketing-seo` — crawlability, metadata, canonicals, robots, sitemap, Search Console/analytics access, indexation baseline, keyword/query backlog, internal-link plan, and a measurement cadence.
+- Future: `cs-marketing-aeo-content` — answer-engine-friendly source-backed pages, structured Q&A where genuinely useful, clear entity/product information, original evidence, and conversion paths. It must avoid empty "AEO hacks" or schema spam.
+- Future: `cs-marketing-content` — Search Console-to-content loop, briefs, editorial calendar, quality gate, publish/review cycle, and status reporting.
 - Future: `cs-carousel-production` — evidence-led carousels that link back to the relevant page and record assets, claims, platform status, and performance.
 - Future: `cs-video-production` — later, only after a repeatable content and approval workflow exists.
 
@@ -107,9 +107,9 @@ Skills must distinguish planning from execution and never imply external complet
 ## Near-term roadmap
 
 1. Preserve and review the existing CodeSpring-specific SEO prototype separately; it is on `feature/seo-website-operator` and is not currently merged into `main`.
-2. Create `cs-website-foundation` first. It establishes the page inventory, site purpose, conversion paths, technical baseline, and the founder-facing NOW/NEXT/LATER operating board.
-3. Build `cs-seo-setup` from the proven portions of the prototype, generalised for customer sites rather than tied to CodeSpring's own repository or branch model.
-4. Add `cs-aeo-content` and `cs-content-operations` once the baseline and tracking access exist.
+2. Use `cs-marketing-website` first. It establishes the page inventory, site purpose, conversion paths, technical baseline, and the founder-facing NOW/NEXT/LATER operating board.
+3. Build `cs-marketing-seo` from proven setup and technical-baseline work, generalised for customer sites rather than tied to CodeSpring's own repository or branch model.
+4. Add `cs-marketing-aeo-content` and `cs-marketing-content` once the baseline and tracking access exist.
 5. Connect offer creation and carousel production to the approved page and content briefs, so distribution promotes a clear offer rather than disconnected assets.
 6. Add video only when there is a repeatable production, approval, publishing, and measurement loop.
 

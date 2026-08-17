@@ -1,5 +1,5 @@
 ---
-name: cs-resync-codebase
+name: cs-build-resync-codebase
 description: >
   Re-sync CodeSpring with the real code after building. Independently checks
   whether the features, notes, and PRDs in CodeSpring still match what the code
@@ -43,7 +43,7 @@ Summarize as: **up to date / minor tweaks / stale**, with a short list of concre
 ## 4. Update CodeSpring (writes go here, not to code)
 - Add/adjust features & sub-features (`codespring feature create --parent ...`, `feature update ...`), keeping the `node-features` count correct (re-parent if flattened — see `pitfalls.md`).
 - Refresh notes (`codespring mindmap note ...`).
-- Refresh PRDs: regenerate via `cs-create-prd` where a PRD is materially stale, or `codespring prd sync <id> --file` for targeted content updates.
+- Refresh PRDs: regenerate via `cs-build-create-prd` where a PRD is materially stale, or `codespring prd sync <id> --file` for targeted content updates.
 - Update tech stack / project info if needed.
 
 ## 5. Confirm

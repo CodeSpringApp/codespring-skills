@@ -101,7 +101,7 @@ codespring mindmap note feature-auth --text "Uses OAuth2 with PKCE flow..."
 
 ## Generating PRDs
 
-The CLI reads and syncs PRDs; it does not yet generate them. PRD generation and attaching PRD nodes to the canvas is a direct API call the CodeSpring app uses — see [prd-management.md](references/prd-management.md) and [mindmap-structure.md](references/mindmap-structure.md). The `cs-create-prd` skill wraps this end-to-end.
+The CLI reads and syncs PRDs; it does not yet generate them. PRD generation and attaching PRD nodes to the canvas is a direct API call the CodeSpring app uses — see [prd-management.md](references/prd-management.md) and [mindmap-structure.md](references/mindmap-structure.md). The `cs-build-create-prd` skill wraps this end-to-end.
 
 ## Detailed References
 
@@ -116,11 +116,11 @@ The CLI reads and syncs PRDs; it does not yet generate them. PRD generation and 
 
 This `codespring` skill is the shared knowledge base (how CodeSpring works + the CLI). The task-specific skills build on it:
 
-- `cs-getting-started` — connect the agent to CodeSpring, then route to the right journey (new-from-scratch vs import).
-- `cs-import-codebase` — map an existing repo into CodeSpring, generate PRDs, and run an independent audit.
-- `cs-create-prd` — generate a Frontend/Backend PRD for a chosen feature (the single source of truth for PRD creation).
-- `cs-create-tasks` — turn a feature's PRDs into a numbered, parallel-safe task list.
+- `cs-build-getting-started` — connect the agent to CodeSpring, then route to the right journey (new-from-scratch vs import).
+- `cs-build-import-codebase` — map an existing repo into CodeSpring, generate PRDs, and run an independent audit.
+- `cs-build-create-prd` — generate a Frontend/Backend PRD for a chosen feature (the single source of truth for PRD creation).
+- `cs-build-create-tasks` — turn a feature's PRDs into a numbered, parallel-safe task list.
 - `cs-build-feature` — interactive build orchestrator (readiness checks → up to 5 sub-agents → break-risk guards).
-- `cs-resync-codebase` — keep CodeSpring in sync with the built code (read-only on code).
+- `cs-build-resync-codebase` — keep CodeSpring in sync with the built code (read-only on code).
 
 See `references/codespring-docs.md` for guiding users through web-app-only steps, and `claude-templates/` (repo root) for per-platform `CLAUDE.md` starters.

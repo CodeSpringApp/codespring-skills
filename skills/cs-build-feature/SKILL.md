@@ -19,7 +19,7 @@ metadata:
 
 A guided, interactive build. Do NOT jump straight to writing code — walk the user through readiness first, then build in a controlled way. This skill both reads the plan and (in the build phase) edits the codebase, so be deliberate.
 
-Uses: `codespring` skill references (`task-workflow.md`, `prd-management.md`, `pitfalls.md`, `codespring-docs.md`), and the sibling skills `cs-create-prd` and `cs-create-tasks`.
+Uses: `codespring` skill references (`task-workflow.md`, `prd-management.md`, `pitfalls.md`, `codespring-docs.md`), and the sibling skills `cs-build-create-prd` and `cs-build-create-tasks`.
 
 ## 0. Connect first
 `codespring auth status` + `codespring status` (LOCAL project; print it).
@@ -34,11 +34,11 @@ For the target feature, verify:
 - The Backend PRD actually covers the shared systems (routes, data model, auth/RLS, jobs/cron, storage, payments/credits, env vars) and a dependency map.
 
 If context is missing:
-- Offer to generate PRDs now via **`cs-create-prd`**, OR
+- Offer to generate PRDs now via **`cs-build-create-prd`**, OR
 - Tell the user to do it in the CodeSpring web app and walk them through it using `references/codespring-docs.md` (open the project → the feature's PRD bridge → add + generate the Frontend/Backend PRD). Then: "Come back and tell me when that's done," and re-check.
 
 ## 3. Tasks check — is there a plan to build?
-Check the Kanban for numbered tasks on this feature (`codespring tasks --feature <id>`). If there are none, run **`cs-create-tasks`** first. Then point the user to the board: in CodeSpring, top-right toggle **Map / Kanban** → click **Kanban** to see the tasks (see `references/codespring-docs.md`).
+Check the Kanban for numbered tasks on this feature (`codespring tasks --feature <id>`). If there are none, run **`cs-build-create-tasks`** first. Then point the user to the board: in CodeSpring, top-right toggle **Map / Kanban** → click **Kanban** to see the tasks (see `references/codespring-docs.md`).
 
 ## 4. Build mode — ask, don't assume
 Ask the user two things:
@@ -52,7 +52,7 @@ List the feature's `todo` tasks by number. Recommend which to do first — pick 
 
 ## 6. Break-risk guard (important)
 Ask: **"Are there any existing features you're worried this could break?"** If yes:
-- Add explicit Kanban check tasks (via `cs-create-tasks` numbering) to verify those features still work after the build, and
+- Add explicit Kanban check tasks (via `cs-build-create-tasks` numbering) to verify those features still work after the build, and
 - Tell every sub-agent, in its brief, not to modify the shared systems those features depend on (from the Backend PRD dependency map) without flagging it.
 
 ## 7. Build
@@ -61,7 +61,7 @@ Ask: **"Are there any existing features you're worried this could break?"** If y
 - Report progress against task numbers so the user can watch the board move.
 
 ## 8. Wrap up
-Summarize what was built, which tasks are done, and what remains. Recommend running the app / tests to verify the testable slice. Suggest **`cs-resync-codebase`** once the feature is finalized, so CodeSpring reflects what was actually built.
+Summarize what was built, which tasks are done, and what remains. Recommend running the app / tests to verify the testable slice. Suggest **`cs-build-resync-codebase`** once the feature is finalized, so CodeSpring reflects what was actually built.
 
 ## What good looks like
 - The user confirmed a 3-bullet understanding before any code was written.

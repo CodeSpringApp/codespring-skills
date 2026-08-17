@@ -1,5 +1,5 @@
 ---
-name: cs-getting-started
+name: cs-build-getting-started
 description: >
   The CodeSpring entry point. Connects the agent to the user's CodeSpring
   account, then routes them to the right journey — design a new project from
@@ -36,13 +36,13 @@ Report back plainly: "Connected to CodeSpring as <workspace>, project <name>."
 Ask the user what they want to do, and route:
 
 1. **Design a new project from scratch** (they have an idea, not much code yet)
-   → Plan it conversationally: capture the app's purpose, then propose core features (sidebar-level) and sub-features, and sync them to the mindmap (`codespring mindmap set-info`, `mindmap tech-stack`, `mindmap features`, `feature create --parent`, `mindmap note`). When features are agreed, offer to generate PRDs with **`cs-create-prd`**.
+   → Plan it conversationally: capture the app's purpose, then propose core features (sidebar-level) and sub-features, and sync them to the mindmap (`codespring mindmap set-info`, `mindmap tech-stack`, `mindmap features`, `feature create --parent`, `mindmap note`). When features are agreed, offer to generate PRDs with **`cs-build-create-prd`**.
 
 2. **Import an existing codebase** (they already have an app)
-   → Hand off to **`cs-import-codebase`**, which reads the real code, builds the feature map, and generates Frontend/Backend PRDs.
+   → Hand off to **`cs-build-import-codebase`**, which reads the real code, builds the feature map, and generates Frontend/Backend PRDs.
 
 3. **Build from an existing CodeSpring plan** (they already have features/PRDs and want to code)
-   → Read the plan (`codespring features`, `codespring prds`, `codespring tasks --status todo`) and work the tasks in order (see the `codespring` skill's `task-workflow.md`). Optionally generate a task list first with **`cs-create-tasks`**.
+   → Read the plan (`codespring features`, `codespring prds`, `codespring tasks --status todo`) and work the tasks in order (see the `codespring` skill's `task-workflow.md`). Optionally generate a task list first with **`cs-build-create-tasks`**.
 
 If they're unsure, recommend: new idea → journey 1; existing repo → journey 2.
 

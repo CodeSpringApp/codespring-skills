@@ -1,5 +1,5 @@
 ---
-name: cs-create-tasks
+name: cs-build-create-tasks
 description: >
   Turn a CodeSpring feature's notes + PRDs into a numbered, prioritized Kanban
   task list linked to that feature. Reads the feature, its sub-features, its
@@ -35,7 +35,7 @@ Before writing any task, gather everything CodeSpring knows so the tasks are saf
 - The feature's **note** (how it works) and its **Frontend + Backend PRDs** (`codespring prds`, then `codespring prd <id>`).
 - Its **sub-features** (`codespring features --parent <featureId>`).
 - **Other features that link to it** — read the whole mindmap and the notes/PRDs of features referenced by this one (and that reference it). The Backend PRD's shared-systems + dependency map is the key input.
-- If PRDs are missing, stop and tell the user to generate them first (run `cs-create-prd`, or generate in the web app — see `references/codespring-docs.md`). Do not invent tasks without the PRDs.
+- If PRDs are missing, stop and tell the user to generate them first (run `cs-build-create-prd`, or generate in the web app — see `references/codespring-docs.md`). Do not invent tasks without the PRDs.
 
 ## 3. Work out the numbering
 CodeSpring tasks are numbered like `X.Y.Z` (e.g. `0.1.0`, `0.1.1`). Continue the existing sequence — do not restart at 0:

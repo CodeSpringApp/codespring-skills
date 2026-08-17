@@ -1,9 +1,9 @@
 ---
-name: cs-import-codebase
+name: cs-build-import-codebase
 description: >
   Import an existing codebase into CodeSpring as a visual feature map — core
   features (sidebar/nav pages) with nested sub-features and a "how it works"
-  note per feature — then generate Frontend + Backend PRDs (via cs-create-prd)
+  note per feature — then generate Frontend + Backend PRDs (via cs-build-create-prd)
   and run an independent background audit of the code vs the map. So CodeSpring
   understands the app and the user can design new features without duplicating
   or breaking what exists. Triggers, "import my codebase into CodeSpring", "map
@@ -43,8 +43,8 @@ codespring mindmap note <coreId> --title "How it works — X" --text "$(cat note
 ```
 Write each core feature's note using the depth from `analyze-codebase.md` §8–9 — it becomes the PRD generator's context.
 
-## 4. Generate PRDs — via the cs-create-prd skill
-Do NOT re-implement PRD mechanics here. For each core feature, use **`cs-create-prd`** (Both frontend + backend) — it captures the shared backend contracts (routes, data model, auth/RLS, jobs/cron, storage, payments/credits/refunds, env vars, dependency map) and attaches the PRD bridge nodes correctly. Loop it over the core features (mindful of the ≥120s timeout and dedupe rules it documents).
+## 4. Generate PRDs — via the cs-build-create-prd skill
+Do NOT re-implement PRD mechanics here. For each core feature, use **`cs-build-create-prd`** (Both frontend + backend) — it captures the shared backend contracts (routes, data model, auth/RLS, jobs/cron, storage, payments/credits/refunds, env vars, dependency map) and attaches the PRD bridge nodes correctly. Loop it over the core features (mindful of the ≥120s timeout and dedupe rules it documents).
 
 ## 5. Verify the map (see pitfalls.md)
 - `node-features.items.length` still equals the real core-feature count (re-parent any flattened sub-features).
@@ -59,7 +59,7 @@ After the map is built, spawn a **background sub-agent** with a FULLY SELF-CONTA
 > 2. **Read everything documented in CodeSpring** — every feature's notes and PRDs (via the `codespring` CLI).
 > 3. **Compare with a critical lens and report**, prioritising **shared backend-infrastructure gaps and conflict risks** (the riskiest part when adding a new feature). Flag: anything in the code that's undocumented; anything that could cause a conflict or a duplicated/broken shared system when building something new; and anything documented but missing critical backend detail — each **rated by severity** with exact file/route/table references, plus a shortlist of what to add to CodeSpring to keep future feature-building conflict-free.
 
-Run it in the background and tell the user you'll report when it's done. When it finishes, walk them through the findings and offer to fold the shortlist back into the notes/PRDs (or hand off to `cs-resync-codebase`).
+Run it in the background and tell the user you'll report when it's done. When it finishes, walk them through the findings and offer to fold the shortlist back into the notes/PRDs (or hand off to `cs-build-resync-codebase`).
 
 ## What good looks like
 - CodeSpring holds an accurate map — right core features, nested sub-features, honest notes, FE/BE PRDs per feature.

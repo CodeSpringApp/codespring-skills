@@ -1,5 +1,5 @@
 ---
-name: cs-create-prd
+name: cs-build-create-prd
 description: >
   Specialist for creating CodeSpring PRDs. Interactive — it lists the user's
   core features, asks which one and whether to generate a Frontend, Backend, or
@@ -20,12 +20,12 @@ metadata:
 
 A PRD gives CodeSpring a full, accurate understanding of a feature so new features build on what exists instead of duplicating backend, re-creating a shared API route, or reinventing the design system. This skill makes the **Frontend** and/or **Backend** PRD for a chosen feature, grounded in the real code.
 
-This is the single source of truth for how PRDs get made — other skills (e.g. `cs-import-codebase`) call this rather than re-implementing it.
+This is the single source of truth for how PRDs get made — other skills (e.g. `cs-build-import-codebase`) call this rather than re-implementing it.
 
 Shared knowledge is in the `codespring` skill's references: `references/analyze-codebase.md`, `references/mindmap-structure.md`, `references/prd-management.md`, `references/pitfalls.md`, `references/codespring-docs.md`.
 
 ## 0. Connect first
-`codespring auth status` (login if needed) + `codespring status`. Use the projectId from the **local** `.codespring/config.json`; print it. If the codebase isn't in CodeSpring yet, run `cs-import-codebase` first. This skill READS code and WRITES only to CodeSpring — never modify the codebase.
+`codespring auth status` (login if needed) + `codespring status`. Use the projectId from the **local** `.codespring/config.json`; print it. If the codebase isn't in CodeSpring yet, run `cs-build-import-codebase` first. This skill READS code and WRITES only to CodeSpring — never modify the codebase.
 
 ## 1. Ask what to generate (interactive)
 Show the user their **core features** (from `codespring features` / the mindmap `node-features` items), then ask:

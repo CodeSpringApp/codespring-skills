@@ -21,7 +21,7 @@ codespring init            # link this directory to a project
 ```
 
 ## Pick your journey
-The docs frame two starting points: **build a new project from scratch** or **import an existing codebase**. `cs-getting-started` routes the user between them.
+The docs frame two starting points: **build a new project from scratch** or **import an existing codebase**. `cs-build-getting-started` routes the user between them.
 
 ## Generate a PRD in the web app
 If the user prefers the app over the CLI/API: open the project canvas → find the target **feature's bridge** → add a **PRD Bridge** to it → generate the **Frontend** and/or **Backend** PRD from that bridge → wait for it to finish. The PRD then appears as a `prdFrontend` / `prdBackend` node on that bridge. (Exact clicks are on the docs page — fetch it if unsure.) The same result is available programmatically via `prd-management.md`.

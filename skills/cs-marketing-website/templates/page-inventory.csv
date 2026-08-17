@@ -1,0 +1,3 @@
+url,page_home,parent_route,navigation_label,page_type,audience,job_to_be_done,primary_cta,proof_or_source,indexation,owner,status,dependency,success_metric,next_action,review_date
+/,home,,Home,product,[buyer],[job],[CTA],[source],index,[owner],DRAFT,[dependency],[metric],[action],YYYY-MM-DD
+/resources/guides/[slug],resources/guides,/resources/guides,[guide title],guide,[reader],[question],[CTA],[source],noindex-until-complete,[owner],DRAFT,[dependency],[metric],[action],YYYY-MM-DD

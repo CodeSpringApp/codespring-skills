@@ -1,5 +1,5 @@
 ---
-name: cs-market-research
+name: cs-marketing-research
 description: >
   Research a product idea before committing it to a CodeSpring build plan. Finds
   direct competitors, open-source projects, substitutes, and relevant platform

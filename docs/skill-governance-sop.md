@@ -14,9 +14,8 @@ Every request must be classified before a new `SKILL.md` is created.
 |---|---|
 | What business outcome is being achieved? | Name the outcome, not the tool or action. |
 | Which lifecycle family owns it? | Use the map below. |
-| Who invokes it? | `customer`, `internal`, or `shared`. |
 | Does an existing skill already own the trigger? | Extend it unless the work has a different approval boundary or output artifact. |
-| Is it dogfooded? | If no, label it `draft` / `internal`; do not present it as proven customer automation. |
+| Is it dogfooded? | If no, label it `draft`; do not present it as proven automation. |
 | What can it change externally? | State approvals for credentials, spend, publication, production, customer data, and legal/product claims. |
 | How is success proven? | Name the file, URL, test, screenshot, identifier, or measured result. |
 
@@ -32,15 +31,12 @@ cs-<family>-<outcome>
 
 | Family | Owns | Examples |
 |---|---|---|
-| `research` | demand, ICP, alternatives, wedge, positioning evidence | `cs-research-market` |
-| `plan` | CodeSpring setup, mapping, PRDs, task plans, product handoffs | `cs-plan-import-codebase` |
+| `marketing` | market demand, ICP, alternatives, positioning, offer, website, SEO, AEO, content, carousels, video | `cs-marketing-research` |
 | `build` | implementation and code-quality execution | `cs-build-feature` |
 | `release` | deployment, security, observability, production verification | `cs-release-security-audit` |
-| `marketing` | offer, website, SEO, AEO, content, carousels, video | `cs-marketing-seo` |
 | `operate` | customer success, metrics, renewals, recurring operations | `cs-operate-renewals` |
-| `internal` | Ferb/CodeSpring control-plane and agent-maintenance workflows | `cs-internal-skill-maintenance` |
 
-Use a durable noun/outcome after the family. Good: `cs-marketing-website`, `cs-plan-task-planning`. Avoid action chains such as `cs-build-create-tasks` and vague names such as `cs-helper`.
+Use a durable, clear outcome after the family. Good: `cs-marketing-website`, `cs-build-create-tasks`. Avoid vague names such as `cs-helper`.
 
 ### Current transition
 
@@ -94,24 +90,15 @@ Split a skill only when at least one is true:
 
 A tool recipe, a checklist, or a one-off platform integration is normally a reference, template, or script — not a new top-level skill.
 
-## 5. Audience and maturity
+## 5. Maturity
 
-Every skill must record one audience and one maturity state in both its frontmatter metadata and `SKILLS.md`.
-
-**Audience**
-
-- `customer` — an explicit Ferb customer outcome; safe to advertise once proven.
-- `internal` — used by Ferb/CodeSpring agents behind the scenes; may not be a direct UI/action for customers.
-- `shared` — intentionally usable in both contexts.
-
-**Maturity**
+Every skill must record a maturity state in `SKILLS.md`.
 
 - `draft` — designed, not dogfooded.
 - `dogfooding` — being run on CodeSpring/Ferb with evidence captured.
 - `proven` — dogfooded and re-run on a customer-shaped example or customer work with permission.
 - `deprecated` — retained only while migration is completed.
 
-Internal skills belong in the same system because Ferb needs them to operate. They must still be explicit, auditable, and safe; they simply are not automatically marketed as a customer feature.
 
 ## 6. Required skill contract
 
@@ -134,9 +121,9 @@ Put always-needed routing and guardrails in `SKILL.md`. Put detailed platform me
 1. **Classify** using Section 1.
 2. **Check collisions:** search `SKILLS.md`, existing skills, and current product/Atlas context.
 3. **Choose the smallest valid capability:** extend an existing skill if appropriate.
-4. **Create the contract:** follow the in-repo `SKILL.md` standard, add audience/maturity metadata, references, and templates only when they are reused.
+4. **Create the contract:** follow the in-repo `SKILL.md` standard; add references and templates only when they are reused.
 5. **Dogfood:** run it against CodeSpring/Ferb; capture what happened and fix missing prerequisites.
-6. **Catalog:** update `SKILLS.md` with name, family, audience, maturity, owner, purpose, and lifecycle handoff.
+6. **Catalog:** update `SKILLS.md` with name, family, maturity, purpose, and lifecycle handoff.
 7. **Validate:** frontmatter, links, commands/scripts, and completion criteria; run the relevant install/discovery smoke test if paths changed.
 8. **Release:** branch → commit → push → remote SHA verification → approved merge to `main`.
 9. **Ingest:** add a concise update to the relevant CodeSpring/Ferb Atlas context after the source is live.
@@ -145,11 +132,11 @@ Put always-needed routing and guardrails in `SKILL.md`. Put detailed platform me
 
 Keep the first release intentionally small:
 
-- `cs-research-market`
-- `cs-plan-project-setup`
-- `cs-plan-import-codebase`
-- `cs-plan-prd`
-- `cs-plan-task-planning`
+- `cs-marketing-research`
+- `cs-build-getting-started`
+- `cs-build-import-codebase`
+- `cs-build-create-prd`
+- `cs-build-create-tasks`
 - `cs-build-feature`
 - `cs-release-production-readiness`
 - `cs-release-security-audit`
@@ -159,9 +146,9 @@ Keep the first release intentionally small:
 - `cs-marketing-content`
 - `cs-marketing-carousel`
 - `cs-operate-growth-review`
-- `cs-internal-skill-maintenance`
+- `cs-operate-skill-maintenance`
 
-The existing `cs-website-foundation` is a good first marketing capability. It should become the future `cs-marketing-website` only during the controlled naming migration, not as an uncoordinated rename now.
+`cs-marketing-website` is the first marketing capability. It supplies the page inventory and website workboard that `cs-marketing-seo` uses for technical and content priorities.
 
 ## 9. Definition of done
 
