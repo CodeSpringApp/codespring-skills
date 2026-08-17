@@ -74,13 +74,21 @@ Update project name/description if discovered from package.json/README.
 
 ---
 
-## 6. Find the TRUE core features — read the sidebar first
+## 6. Find the TRUE core features — read the sidebar first, then cut
 
-Section 4 gives candidates; this pins them down. In most webapps the **core features are the sidebar / primary-nav items = pages**. Find and read the nav/sidebar component (search for `sidebar`, `nav`, `navItems`, `routes`) and take its entries verbatim — that is the authoritative core-feature list. Only fall back to routes/README when there is no nav. A core feature is the highest-level thing a user recognizes as "a thing the app does"; it should map to a page/section, not a file.
+Section 4 gives candidates; this pins them down. In most webapps the **core features are the sidebar / primary-nav items = pages**. Find and read the nav/sidebar component (search for `sidebar`, `nav`, `navItems`, `routes`) and take its entries as the candidate list. Only fall back to routes/README when there is no nav. A core feature is the highest-level thing a user recognizes as "a thing the app does"; it should map to a page/section, not a file.
 
-## 7. Sub-features
+**Then cut the list down.** Aim for **4–8 core features.** Above 8, argue for each one; above 10 you have almost certainly split one feature into many. Merge screens that are one job spread across pages, and drop pages the app shouldn't have (dead ends, orphans, internal galleries). A real run produced **13 confusing** core features before being cut to **6 clean** ones — the smaller list was the correct one. Read the list back to the user and ask them to cut it further before writing anything.
 
-Under each core feature, list the specialized capabilities that make it work (the screens/actions/steps inside that page — e.g. under a "Projects" page: Create Project, Invite Teammate, Project Detail). Create them parented to the core feature (`codespring feature create --parent <coreFeatureId>`). Keep descriptions to one sentence; depth goes in the note/PRD.
+## 7. Sub-features — things a user DOES
+
+Under each core feature, list the specialized capabilities that make it work — the actions inside that page, e.g. under a "Projects" page: Create Project, Invite Teammate, Project Detail. **A sub-feature is a verb: something the user does.** Create them parented to the core feature (`codespring feature create --parent <coreFeatureId>`). Keep descriptions to one sentence; depth goes in the note/PRD.
+
+**Do not turn report/page sections or form field-groups into sub-features.** This is the specific mistake that produced the 13-feature mess:
+- **A report or output section is not a feature.** "Government costs", "Tax benefits", "Glossary" are parts of one feature's output. Twelve report sections make **one** feature plus a good note — not twelve features.
+- **A form field-group is not a feature.** "Location", "Loan details", "Property details" are parts of one feature's input. The feature is *analysing a property*; those are panels of it.
+
+Symptoms you got this wrong: core features that read like a table of contents; sub-features that are nouns; more features than the app has screens; two sub-features a user couldn't tell apart. If detail is being lost, the **note** is too thin — enrich it rather than adding features.
 
 ## 8. Backend depth (feeds the note + Backend PRD)
 

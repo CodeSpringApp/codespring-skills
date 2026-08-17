@@ -21,6 +21,15 @@ npm i -g @codespring-app/cli
 codespring auth login
 ```
 
+## Which skill do I run?
+
+**[`JOURNEYS.md`](JOURNEYS.md)** — the two journeys and what runs in each:
+
+- **They have an idea** → `cs-build-plan-app` → `cs-build-ui-mockup` → `cs-build-create-prd` → `cs-build-create-tasks` → `cs-build-handoff` → they build
+- **They have a codebase** → `cs-build-audit-codebase` → `cs-build-import-codebase` → `cs-build-create-prd` → `cs-build-create-tasks` → `cs-build-handoff` → they build
+
+Unsure? Run **`cs-build-getting-started`** — it detects where the project is and names one next step.
+
 ## What's included
 
 One command installs the whole pack. It's organized as a core knowledge skill plus task-specific specialists (see [`SKILLS.md`](SKILLS.md) for the status tracker). The productized, end-to-end CodeSpring + Ferb roadmap is in [`docs/skill-suite-vision.md`](docs/skill-suite-vision.md).
