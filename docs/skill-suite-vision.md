@@ -23,9 +23,11 @@ Do not design skills around tool usage alone. Design them around a completed bus
 
 ## Skill-map architecture
 
-Keep individual installable skills flat in `skills/` using the existing `cs-*` naming convention. Avoid creating a nested `skills/codespring/marketing/seo/` tree until the installer and agent discovery behavior explicitly support grouped skill packages. Use the core `codespring` skill for shared CodeSpring mechanics and references; specialist skills own one customer outcome and link to the shared core rather than duplicating it.
+Use lifecycle-family names for every new installable capability: `cs-<family>-<outcome>` (for example, `cs-marketing-seo` and `cs-build-feature`). The published installation surface remains flat in `skills/` until the exact default installer command has been smoke-tested against a nested package. This avoids discovering too late that a customer installation skipped a nested skill.
 
-Use `docs/` for the cross-cutting operating model, lifecycle maps, templates, acceptance criteria, and skill roadmaps. This preserves a small, discoverable skill surface while allowing a coherent marketing or operations system to span multiple specialist skills.
+The source system is still categorised from day one: `SKILLS.md` records family, audience (`customer`, `internal`, or `shared`), maturity, owner, and handoff; [`docs/skill-governance-sop.md`](skill-governance-sop.md) is the mandatory routing and authoring SOP; and `AGENTS.md` makes it automatic for agents editing the repository. Use the core `codespring` skill for shared CodeSpring mechanics and references; specialist skills own one customer outcome and link to the shared core rather than duplicating it.
+
+Use `docs/` for cross-cutting operating models, lifecycle maps, templates, acceptance criteria, and skill roadmaps. This preserves a small, discoverable installation surface while allowing a coherent marketing or operations system to span multiple specialist skills.
 
 ## Customer lifecycle and skill families
 

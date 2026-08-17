@@ -9,16 +9,16 @@ Working tracker for the CodeSpring skill pack. `npx skills add CodeSpringApp/cod
 
 ## Skills
 
-| Skill | Kind | Status | Version | Purpose |
-|-------|------|--------|---------|---------|
-| `codespring` | core | needs-review | 1.0 | How CodeSpring works + full CLI. Holds the canonical references. |
-| `cs-getting-started` | specialist | draft | 0.1 | Connect the agent, then route: new-from-scratch vs import. |
-| `cs-import-codebase` | specialist | draft | 0.3 | Map a repo → features/sub-features/notes; PRDs via `cs-create-prd`; then an independent read-only audit. |
-| `cs-create-prd` | specialist | draft | 0.2 | Interactive: pick a feature, FE/BE/both, deep-dive code (incl. shared backend contracts), generate + attach PRDs. |
-| `cs-create-tasks` | specialist | draft | 0.2 | Feature → numbered, prioritized, parallel-safe Kanban tasks with reuse/don't-break notes. |
-| `cs-build-feature` | specialist | draft | 0.1 | Interactive build: readiness check → tasks → build (up to 5 sub-agents) with break-risk guards. |
-| `cs-resync-codebase` | specialist | draft | 0.1 | Read-only-on-code staleness check; updates CodeSpring to match the built code. |
-| `cs-market-research` | specialist | draft | 0.1 | Research an idea, identify the real wedge, and sync only the justified plan to CodeSpring. |
+| Skill | Family | Audience | Maturity | Version | Purpose |
+|-------|--------|----------|----------|---------|---------|
+| `codespring` | plan | shared | needs-review | 1.0 | How CodeSpring works + full CLI. Holds the canonical references. |
+| `cs-getting-started` | plan | shared | draft | 0.1 | Connect the agent, then route: new-from-scratch vs import. |
+| `cs-import-codebase` | plan | shared | draft | 0.3 | Map a repo → features/sub-features/notes; PRDs via `cs-create-prd`; then an independent read-only audit. |
+| `cs-create-prd` | plan | shared | draft | 0.2 | Interactive: pick a feature, FE/BE/both, deep-dive code (incl. shared backend contracts), generate + attach PRDs. |
+| `cs-create-tasks` | plan | shared | draft | 0.2 | Feature → numbered, prioritized, parallel-safe Kanban tasks with reuse/don't-break notes. |
+| `cs-build-feature` | build | shared | draft | 0.1 | Interactive build: readiness check → tasks → build (up to 5 sub-agents) with break-risk guards. |
+| `cs-resync-codebase` | plan | shared | draft | 0.1 | Read-only-on-code staleness check; updates CodeSpring to match the built code. |
+| `cs-market-research` | research | shared | draft | 0.1 | Research an idea, identify the real wedge, and sync only the justified plan to CodeSpring. |
 
 ## References (inside `skills/codespring/references/`)
 
@@ -38,6 +38,10 @@ Working tracker for the CodeSpring skill pack. `npx skills add CodeSpringApp/cod
 
 ## What "needs update" means here
 Track staleness here. When the CLI adds a real `prd generate`/`prd create` command (today it's an API workaround), update `prd-management.md` + the specialists and drop the direct-API steps. Same when sub-feature notes, spec-documents, or task-linking to sub-features become first-class.
+
+## Skill governance
+
+Before adding or changing a skill, follow [`docs/skill-governance-sop.md`](docs/skill-governance-sop.md). It assigns every skill to a lifecycle family, defines `customer` / `internal` / `shared` audiences and maturity states, prevents duplicate micro-skills, and makes `AGENTS.md` the automatic routing rule for agents working in this repository. New installable skills use `cs-<family>-<outcome>` names; the installation surface remains flat only until a nested discovery migration has been smoke-tested.
 
 ## Productized operating model
 
