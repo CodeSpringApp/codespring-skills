@@ -46,6 +46,7 @@ It carries the canonical `references/` (commands, task-workflow, analyze-codebas
 - **`cs-build-resync-codebase`** — after building, checks whether CodeSpring is stale vs the real code and updates the map (read-only on your code).
 - **`cs-marketing-research`** — researches demand, competitors, alternatives, and positioning before committing marketing or product work.
 - **`cs-marketing-website`** — sets up and organises the page inventory, proof map, conversion paths, and founder-facing NOW/NEXT/LATER/BLOCKED website workboard.
+- **`cs-marketing-seo`** — dogfooding technical SEO, query-led page priorities, ethical discovery and measurable review loops for a real app.
 
 Also: `claude-templates/` — agnostic `CLAUDE.md` starters by app type (web / iOS / macOS). See [`SKILLS.md`](SKILLS.md) for status and roadmap.
 

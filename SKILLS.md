@@ -21,6 +21,7 @@ Working tracker for the CodeSpring skill pack. `npx skills add CodeSpringApp/cod
 | `cs-build-resync-codebase` | build | draft | 0.1 | Re-sync CodeSpring plans with the real code after building. |
 | `cs-marketing-research` | marketing | draft | 0.1 | Research market demand, alternatives, positioning, and a defensible wedge before committing work. |
 | `cs-marketing-website` | marketing | dogfooding | 0.1 | Build and maintain the page inventory, proof map, conversion paths, and founder-facing NOW/NEXT/LATER/BLOCKED website workboard. |
+| `cs-marketing-seo` | marketing | dogfooding | 0.1 | Establish verified crawl/index health, query-led page priorities, honest discovery and a measurable SEO review loop. |
 
 ## References (inside `skills/codespring/references/`)
 
@@ -42,11 +43,11 @@ Before adding or changing a skill, follow [`docs/skill-governance-sop.md`](docs/
 
 The skills are being expanded into a dogfooded operating system for a software company: market decision → build planning → Ferb build → deployment/security/operations → offer → website → SEO/AEO → content, carousel, and eventually video production. See [`docs/skill-suite-vision.md`](docs/skill-suite-vision.md) for the lifecycle, quality rules, delivery-status language, and staged roadmap.
 
-The first marketing capability is **`cs-marketing-website`**, which maintains the page inventory and a founder-facing **NOW / NEXT / LATER / BLOCKED** workboard. It is followed by `cs-marketing-seo`, then AEO/content operations. SEO is one capability skill with setup, technical baseline, page work, and measurement subflows — not several micro-skills.
+The first marketing capability is **`cs-marketing-website`**, which maintains the page inventory and a founder-facing **NOW / NEXT / LATER / BLOCKED** workboard. **`cs-marketing-seo`** is now dogfooding the technical baseline, query-to-content, discovery and measurement system; AEO/content operations follow as focused capabilities.
 
 ## Backlog / to revisit
 
-- **`cs-marketing-seo`** — dogfood setup, technical baseline, Search Console, page briefs, and measurement loop using the website workboard.
+- **`cs-marketing-seo`** — continue dogfooding setup, technical baseline, Search Console, page briefs, and measurement loop using the website workboard.
 - **`cs-marketing-aeo-content`** — source-backed answer-led resource pages after the SEO foundation exists.
 - **`cs-marketing-carousel`** — evidence-led carousel creation tied to an approved page/content brief.
 - **`cs-release-production-readiness`** and **`cs-release-security-audit`** — deployment, production evidence, and security controls.

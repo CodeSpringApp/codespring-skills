@@ -1,0 +1,2 @@
+url,page_home,target_intent,cluster,audience,primary_cta,approved_evidence,owner,status,indexation,internal_links_in,internal_links_out,publish_or_deploy_date,review_14d,review_28d,review_56d,next_action,blocker
+/resources/guides/example,resources/guides,[question],[cluster],[reader],[CTA],[evidence],[owner],DRAFT,noindex-until-complete,[URLs],[URLs],,,,,[action],[blocker]

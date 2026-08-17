@@ -72,7 +72,7 @@ Create separate specialist skills rather than one oversized "SEO" skill:
 
 - Future: `cs-offer-creation` — ICP, problem, promise, proof, packaging, pricing hypothesis, objections, landing-page brief, and conversion measurement.
 - `cs-marketing-website` — information architecture, page inventory, purpose of every page, conversion paths, analytics, technical website baseline, and an explicit now/next/later workboard.
-- Future: `cs-marketing-seo` — crawlability, metadata, canonicals, robots, sitemap, Search Console/analytics access, indexation baseline, keyword/query backlog, internal-link plan, and a measurement cadence.
+- `cs-marketing-seo` — dogfooding crawlability, metadata, canonicals, robots, sitemap, Search Console/analytics access, indexation baseline, query backlog, internal-link plan and measurement cadence.
 - Future: `cs-marketing-aeo-content` — answer-engine-friendly source-backed pages, structured Q&A where genuinely useful, clear entity/product information, original evidence, and conversion paths. It must avoid empty "AEO hacks" or schema spam.
 - Future: `cs-marketing-content` — Search Console-to-content loop, briefs, editorial calendar, quality gate, publish/review cycle, and status reporting.
 - Future: `cs-carousel-production` — evidence-led carousels that link back to the relevant page and record assets, claims, platform status, and performance.
@@ -108,7 +108,7 @@ Skills must distinguish planning from execution and never imply external complet
 
 1. Preserve and review the existing CodeSpring-specific SEO prototype separately; it is on `feature/seo-website-operator` and is not currently merged into `main`.
 2. Use `cs-marketing-website` first. It establishes the page inventory, site purpose, conversion paths, technical baseline, and the founder-facing NOW/NEXT/LATER operating board.
-3. Build `cs-marketing-seo` from proven setup and technical-baseline work, generalised for customer sites rather than tied to CodeSpring's own repository or branch model.
+3. Dogfood `cs-marketing-seo` against CodeSpring’s production baseline and Resources workboard, capture the public evidence and generalise any missing safeguards before calling it proven.
 4. Add `cs-marketing-aeo-content` and `cs-marketing-content` once the baseline and tracking access exist.
 5. Connect offer creation and carousel production to the approved page and content briefs, so distribution promotes a clear offer rather than disconnected assets.
 6. Add video only when there is a repeatable production, approval, publishing, and measurement loop.
