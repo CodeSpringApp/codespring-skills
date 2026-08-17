@@ -47,14 +47,25 @@ It carries the canonical `references/` (commands, task-workflow, analyze-codebas
 
 ### Specialist skills
 
-- **`cs-build-getting-started`** — connects the agent to CodeSpring, then routes you: design a new project from scratch, or import an existing codebase.
+**Build family** — idea or codebase → shipped app:
+
+- **`cs-build-getting-started`** — connects the agent to CodeSpring, reports where the project actually is, and names the single next step.
+- **`cs-build-plan-app`** — no code yet. Turns an idea, a call recording or a transcript into the map: core features, sub-features and notes.
+- **`cs-build-audit-codebase`** — diagnoses a codebase that isn't doing its job and gives a plain-English findings list plus a rebuild-or-fix verdict.
 - **`cs-build-import-codebase`** — reads your real code and maps it into CodeSpring (core features, sub-features, notes), generates Frontend + Backend PRDs, then runs an independent read-only audit of code vs map.
+- **`cs-build-ui-mockup`** — builds a clickable local mockup and style guide from the notes, runs the review, and feeds every correction back into the plan. Before the PRDs.
 - **`cs-build-create-prd`** — pick a feature and generate a Frontend, Backend, or Both PRD, deep-dived from the code (incl. shared backend systems) and attached to the feature.
 - **`cs-build-create-tasks`** — turn a feature's PRDs into a numbered, prioritized, parallel-safe Kanban task list.
+- **`cs-build-handoff`** — turns the finished plan into the pack a paying client actually receives.
 - **`cs-build-feature`** — interactive build: checks readiness, then works the tasks (up to 5 parallel sub-agents) with guards against breaking existing features.
 - **`cs-build-resync-codebase`** — after building, checks whether CodeSpring is stale vs the real code and updates the map (read-only on your code).
+
+**Marketing and SEO family** — demand, offer, website:
+
 - **`cs-marketing-research`** — researches demand, competitors, alternatives, and positioning before committing marketing or product work.
+- **`cs-marketing-offer-creation`** — designs a paid-ads offer from evidence: Meta Ad Library teardown, the landing pages behind the winning ads, then the offer, price ladder, order bumps and back end.
 - **`cs-marketing-website`** — sets up and organises the page inventory, proof map, conversion paths, and founder-facing NOW/NEXT/LATER/BLOCKED website workboard.
+- **`cs-seo-website`** — operates CodeSpring marketing-site technical SEO, the Search Console-to-content loop, Vibe Code Library publishing gates and vetted product listings.
 
 Also: `claude-templates/` — agnostic `CLAUDE.md` starters by app type (web / iOS / macOS). See [`SKILLS.md`](SKILLS.md) for status and roadmap.
 
