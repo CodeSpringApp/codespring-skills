@@ -11,6 +11,20 @@ Preferred source: Google Search Console export with query, page, clicks, impress
 - Consolidate/redirect when multiple pages split the same intent.
 - Keep incomplete/empty hubs out of the sitemap and noindex.
 
+## Intent and feasibility lens
+
+Classify every opportunity before ordering the backlog:
+
+| Tier | Typical intent | Appropriate page home |
+| --- | --- | --- |
+| High purchase intent | category, pricing, alternatives, migration, implementation or solution selection | product/solution page or a fair comparison |
+| Medium intent | an acute workflow/problem the product demonstrably helps solve | evidence-led Resource guide or tool |
+| Low intent | broad education, standards or best practices | guide only when it supports a real topic cluster and conversion path |
+
+Use keyword tools (Ahrefs or an equivalent) to expand language, inspect SERPs and estimate difficulty, but treat difficulty as a **decision input**, not a promise. Prefer high-intent, feasible opportunities where the site can provide materially better evidence or a clearer workflow. Do not manufacture competitor-comparison pages merely because a tool reports volume.
+
+For each planned page, record the intent tier, source of demand, estimated feasibility, unique evidence and conversion path in the SEO register.
+
 ## Content quality gate
 
 Every indexable page needs:
