@@ -1,7 +1,7 @@
 ---
 name: cs-seo-website
 description: "Use when growing CodeSpring site SEO, content, or listings."
-version: 0.2.0
+version: 0.3.0
 author: CodeSpring
 metadata:
   tags: [codespring, seo, marketing-site, search-console, content, link-building]
@@ -89,7 +89,32 @@ Monthly scoreboard:
 
 `non-branded impressions | non-branded clicks | top-20 queries | indexed URLs | qualified organic sessions | organic sign-ups | referring domains | referral sign-ups`.
 
-## 3. Content systems
+## 3. Proactive daily content desk
+
+Run a founder-reviewable SEO desk at the start of each working day. The default output is **five ranked opportunities and up to three complete review pages**, not five automatically published URLs. Five new pages is a ceiling only when each has distinct intent, original value, demand evidence, no cannibalisation and a credible conversion path. This protects CodeSpring from scaled-content and doorway-page behavior while still creating a fast production rhythm.
+
+Use Search Console first, the cached monthly DataForSEO dataset second and live SERPs only for the short list. Treat Instagram, TikTok, YouTube and sales calls as qualitative sources for language, questions and objections—not as automatic one-video-per-landing-page instructions. Improve an existing canonical page whenever it already owns the intent.
+
+Each morning:
+
+1. rank five opportunities across commercial comparisons, problem-led guides, useful tools/templates, canonical-page refreshes and proof/docs/story work;
+2. build the top three complete pages only when they pass the evidence and content gates;
+3. push a review branch and provide one verified, directly openable Vercel route per page—never localhost;
+4. send Sebastian a compact review packet with the target query, SERP gap, original value, CodeSpring position, CTA and one exact decision needed;
+5. select one or two pages where a founder YouTube video materially adds proof or teaching value;
+6. keep video demos simple by default: no authentication, database, backend, payments or deployment; use a single-screen utility, local-data interaction, one workflow or a current-interface comparison;
+7. create thumbnail candidates only after the page and video angle are approved;
+8. apply feedback, refresh previews and merge only with explicit approval; keep AWS production deployment separate.
+
+Track every opportunity and page through:
+
+`OPPORTUNITY → BRIEFED → REVIEW → REVISION → APPROVED → MERGED → AWAITING AWS DEPLOYMENT → LIVE / VERIFIED → 14/28/56-DAY REVIEW`.
+
+The morning run is incomplete without remote review URLs or explicit access blockers. Never call a Vercel preview published or live. Never let a page quota override distinct intent, usefulness, original evidence or quality.
+
+Use `references/daily-seo-content-desk.md` for the full selection, build, video and measurement workflow. Write the daily artifact with `templates/morning-seo-review.md`.
+
+## 4. Content systems
 
 ### Tutorials and documentation
 
@@ -120,7 +145,7 @@ Use the dedicated `feat/codespring-vibe-code-library` branch and strategy doc. A
 
 The library’s conversion asset is not a generic directory listing: it is an honest plan/prompt/map for building a scoped substitute, with a real CTA destination.
 
-## 4. Listings and mentions
+## 5. Listings and mentions
 
 Create one product-profile packet before using any directory:
 
@@ -149,10 +174,13 @@ Track every prospect in a ledger:
 
 Status labels are exact: **DRAFT**, **AWAITING APPROVAL**, **SUBMITTED**, **LIVE**, or **REJECTED**. Do not call a submission a live backlink until the public listing and outbound link are verified.
 
-## 5. Review and release checklist
+## 6. Review and release checklist
 
 - [ ] Live and `origin/main` source inspected first.
 - [ ] Search intent and original evidence exist for each indexable page.
+- [ ] Daily desk ranks five opportunities but builds no more than three by default; extra pages independently pass the no-cannibalisation and original-value gates.
+- [ ] Every completed morning page has a directly openable, verified Vercel review route and one precise founder decision request.
+- [ ] Video briefs are limited to one or two high-value pages, use deliberately simple scope and do not block page review.
 - [ ] Canonical, title, description, server-rendered links and sitemap inclusion checked.
 - [ ] New Vibe Code pages pass the content gate.
 - [ ] Listing passes relevance/quality gate and has approval.
