@@ -1,7 +1,7 @@
 ---
 name: cs-seo-website
 description: "Use when growing CodeSpring site SEO, content, or listings."
-version: 0.1.0
+version: 0.2.0
 author: CodeSpring
 metadata:
   tags: [codespring, seo, marketing-site, search-console, content, link-building]
@@ -97,6 +97,23 @@ Use tutorials for problems the product demonstrably solves: planning an AI-built
 
 Do not write generic AI filler or dozens of slight keyword variants. One high-quality tutorial with original examples and internal links beats a thin post farm.
 
+### Editorial comparison and guide pages
+
+Treat a comparison page as an editorial article, not a landing-page feature grid.
+
+1. **Read the live SERP examples first.** Inspect the strongest ranking pages for structure, reader questions and missing evidence. Learn from them without copying text, images or unsupported claims.
+2. **Start with the reader.** Open with the situation, problem and decision they are trying to make. Do not introduce CodeSpring before answering the comparison intent.
+3. **Use article anatomy.** Include a visible founder byline/photo when Sebastian is the author, an updated date, reading time and linked chapter navigation for long pages.
+4. **Give each compared product its own section.** Explain what Claude Code, Codex, Cursor or another product does well, who it suits and what context it still needs. Put CodeSpring in its own later section, then summarise the choice in a fair table or decision path.
+5. **Use real visuals, not decorative substitutes.** For every third-party product, use a current screenshot captured from that product's first-party public product page or documentation. Store the optimised image locally, record the source URL/date, add meaningful alt text and link the caption to the official source. Never use search-result thumbnails, AI-redrawn interfaces or generic text-block diagrams when an authentic UI view is available.
+6. **Reuse real CodeSpring product assets.** Inspect the current homepage and `public/` library before inventing a diagram. Prefer the real mind map, generated PRD, journey/map or Kanban board screenshots already approved on the site. Replace placeholder architecture blocks with the relevant product UI.
+7. **Make comparison tables scannable.** Pair each product name with its official/approved logo at a consistent size. Keep supporting copy slightly smaller than article body copy and present each cell as a short bullet-style point rather than a dense paragraph. Logos identify products; they do not imply endorsement.
+8. **Build a visible internal-link map.** Link CodeSpring mentions to the homepage where the reader needs the product definition. Link topical phrases such as mind map, PRDs and Kanban board to their specific documentation pages. Links must look like links without requiring hover: use an accessible contrasting colour and underline, then verify every destination. Keep the final CTA direct. Link third-party screenshot captions and sources to their first-party pages.
+9. **Keep evidence honest.** Do not claim hands-on benchmark results unless the same task, environment and review method were documented. State when a page is a decision guide rather than a performance benchmark.
+10. **Verify the whole article.** Confirm screenshots load at natural dimensions, logos are legible, chapter anchors work, mobile/desktop layouts remain readable, metadata/canonical/schema are correct and every claim has visible support.
+
+For review, a Vercel PR preview is acceptable when it is actually accessible to the reviewer. Production remains the manual AWS workflow. Label the preview `REVIEW`, not `LIVE / VERIFIED`, and never imply that a Vercel preview changed AWS production.
+
 ### Vibe Code Library
 
 Use the dedicated `feat/codespring-vibe-code-library` branch and strategy doc. An app page becomes indexable only when it has an original scoped verdict, realistic core loop, hard boundaries/exclusions, feature groups, original FAQs, sources/review date and meaningful related links. Draft pages stay out of the sitemap.
@@ -139,7 +156,9 @@ Status labels are exact: **DRAFT**, **AWAITING APPROVAL**, **SUBMITTED**, **LIVE
 - [ ] Canonical, title, description, server-rendered links and sitemap inclusion checked.
 - [ ] New Vibe Code pages pass the content gate.
 - [ ] Listing passes relevance/quality gate and has approval.
+- [ ] Editorial pages use article anatomy, first-party screenshots, approved logos, image provenance and real CodeSpring product assets.
+- [ ] Comparison tables are compact and scannable; internal links are visible without hover and point to the relevant homepage or documentation route.
 - [ ] Mobile/desktop and themes reviewed for UI changes.
-- [ ] `npm run type-check` and `npm run build` pass.
-- [ ] Branch pushed, remote SHA verified, draft PR targets `dev`.
-- [ ] Report branch/PR/dev/production status separately.
+- [ ] `npx tsc --noEmit`, `npm run build` and `node --test tests/*.mjs` pass, or unchanged baseline failures are reported exactly.
+- [ ] Branch pushed, remote SHA verified and draft PR targets `main`.
+- [ ] Report review preview and AWS production status separately.
