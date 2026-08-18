@@ -1,7 +1,7 @@
 ---
 name: cs-seo-website
 description: "Use when growing CodeSpring site SEO, content, or listings."
-version: 0.3.0
+version: 0.4.0
 author: CodeSpring
 metadata:
   tags: [codespring, seo, marketing-site, search-console, content, link-building]
@@ -91,14 +91,14 @@ Monthly scoreboard:
 
 ## 3. Proactive daily content desk
 
-Run a founder-reviewable SEO desk at the start of each working day. The default output is **five ranked opportunities and up to three complete review pages**, not five automatically published URLs. Five new pages is a ceiling only when each has distinct intent, original value, demand evidence, no cannibalisation and a credible conversion path. This protects CodeSpring from scaled-content and doorway-page behavior while still creating a fast production rhythm.
+Run a founder-reviewable SEO desk at the start of each working day. The target output is **five distinct, fully written review pages**, not five briefs and never five automatically published URLs. Every page must independently have distinct intent, original value, demand evidence, no cannibalisation and a credible conversion path. If only three or four pages can honestly pass those gates, deliver those complete pages and explain why the remaining slots were withheld. This protects CodeSpring from scaled-content and doorway-page behavior while still creating a fast production rhythm.
 
 Use Search Console first, the cached monthly DataForSEO dataset second and live SERPs only for the short list. Treat Instagram, TikTok, YouTube and sales calls as qualitative sources for language, questions and objections—not as automatic one-video-per-landing-page instructions. Improve an existing canonical page whenever it already owns the intent.
 
 Each morning:
 
 1. rank five opportunities across commercial comparisons, problem-led guides, useful tools/templates, canonical-page refreshes and proof/docs/story work;
-2. build the top three complete pages only when they pass the evidence and content gates;
+2. build up to five complete, readable pages; withhold any slot that cannot pass the evidence and content gates;
 3. push a review branch and provide one verified, directly openable Vercel route per page—never localhost;
 4. send Sebastian a compact review packet with the target query, SERP gap, original value, CodeSpring position, CTA and one exact decision needed;
 5. select one or two pages where a founder YouTube video materially adds proof or teaching value;
@@ -112,7 +112,7 @@ Track every opportunity and page through:
 
 The morning run is incomplete without remote review URLs or explicit access blockers. Never call a Vercel preview published or live. Never let a page quota override distinct intent, usefulness, original evidence or quality.
 
-Use `references/daily-seo-content-desk.md` for the full selection, build, video and measurement workflow. Write the daily artifact with `templates/morning-seo-review.md`.
+Use `references/daily-seo-content-desk.md` for the full selection, build, video, indexing and measurement workflow. Write the daily artifact with `templates/morning-seo-review.md`.
 
 ## 4. Content systems
 
@@ -178,7 +178,7 @@ Status labels are exact: **DRAFT**, **AWAITING APPROVAL**, **SUBMITTED**, **LIVE
 
 - [ ] Live and `origin/main` source inspected first.
 - [ ] Search intent and original evidence exist for each indexable page.
-- [ ] Daily desk ranks five opportunities but builds no more than three by default; extra pages independently pass the no-cannibalisation and original-value gates.
+- [ ] Daily desk targets five fully written review pages; every page independently passes the no-cannibalisation and original-value gates, and withheld slots have an explicit reason.
 - [ ] Every completed morning page has a directly openable, verified Vercel review route and one precise founder decision request.
 - [ ] Video briefs are limited to one or two high-value pages, use deliberately simple scope and do not block page review.
 - [ ] Canonical, title, description, server-rendered links and sitemap inclusion checked.
@@ -190,3 +190,4 @@ Status labels are exact: **DRAFT**, **AWAITING APPROVAL**, **SUBMITTED**, **LIVE
 - [ ] `npx tsc --noEmit`, `npm run build` and `node --test tests/*.mjs` pass, or unchanged baseline failures are reported exactly.
 - [ ] Branch pushed, remote SHA verified and draft PR targets `main`.
 - [ ] Report review preview and AWS production status separately.
+- [ ] After approval and AWS verification, provide the sitemap/internal-link/Search Console indexing handoff; never imply a crawl request guarantees indexing.
