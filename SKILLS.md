@@ -60,7 +60,7 @@ Anything that must give the same answer every run is a script in `codespring/scr
 | `cs-marketing-research` | marketing | draft | 0.1 | Research market demand, alternatives, positioning, and a defensible wedge before committing work. |
 | `cs-marketing-offer-creation` | marketing | draft | 0.1 | Design a paid-ads offer from evidence: Meta Ad Library teardown ranked by survival and creative duplication, landing pages behind the winning ads, then the offer, price ladder, order bumps and back end as a durable teardown document. |
 | `cs-marketing-website` | marketing | dogfooding | 0.1 | Build and maintain the page inventory, proof map, conversion paths, and founder-facing NOW/NEXT/LATER/BLOCKED website workboard. |
-| `cs-seo-website` | seo | dogfooding | 0.2 | CodeSpring marketing-site SEO plus evidence-led editorial pages: reader-first structure, first-party product screenshots, real CodeSpring UI assets, logos, provenance, metadata and measurement. Operates on the CodeSpring website repo, not customer projects. |
+| `cs-seo-website` | seo | dogfooding | 0.3 | CodeSpring SEO plus a proactive daily content desk: ranks five opportunities, builds up to three evidence-led review pages, supplies remote previews, assigns simple founder-video briefs and tracks approval through measurement. |
 
 ## References (inside `skills/codespring/references/`)
 
