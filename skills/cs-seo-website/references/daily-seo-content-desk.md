@@ -4,7 +4,7 @@ Use this operating loop to prepare a founder-reviewable SEO packet each morning 
 
 ## Capacity rule
 
-The default is **five qualified opportunities, three review-ready page drafts** per working day.
+The target is **five qualified opportunities and five fully written, review-ready page drafts** per working day.
 
 Five new indexable pages is a ceiling, not a quota. Build all five only when every page:
 
@@ -13,7 +13,7 @@ Five new indexable pages is a ceiling, not a quota. Build all five only when eve
 - contains original explanation, proof, product UI, example, tool or founder judgment;
 - passes the content, metadata, internal-link and visual verification gates independently.
 
-Use the remaining two slots for an existing-page refresh, internal-link improvement, documentation expansion, customer-proof work or a queued brief when the evidence is not strong enough for another new page. [Google defines scaled-content abuse](https://developers.google.com/search/docs/essentials/spam-policies#scaled-content) as generating many low-value or unoriginal pages primarily to manipulate rankings; speed never overrides usefulness.
+Five is a production target, not permission to lower the gate. If only three or four opportunities can become useful, non-overlapping pages, deliver those complete pages and state why the other slots were withheld. A slot may instead be an existing-page refresh, internal-link improvement, documentation expansion or customer-proof page when that is the better canonical answer. [Google defines scaled-content abuse](https://developers.google.com/search/docs/essentials/spam-policies#scaled-content) as generating many low-value or unoriginal pages primarily to manipulate rankings; speed never overrides usefulness.
 
 ## Daily page mix
 
@@ -45,7 +45,7 @@ For every candidate record: query, country, intent, volume/date, difficulty sign
 
 Score each opportunity on demand, commercial/problem intent, CodeSpring fit, ability to add original value, ranking feasibility, production effort and cannibalisation risk. Reject a candidate if its only distinction is a slight keyword variation.
 
-Choose the top three for full production. Keep candidates four and five as briefs or use them for improvements unless they independently pass every gate.
+Attempt full production for all five in rank order. Withhold a candidate rather than turn it into a thin page when it fails a gate. The morning packet must say exactly which gate failed.
 
 ### 3. Build complete review drafts
 
@@ -107,6 +107,23 @@ Track exact states:
 
 `OPPORTUNITY → BRIEFED → REVIEW → REVISION → APPROVED → MERGED → AWAITING AWS DEPLOYMENT → LIVE / VERIFIED → 14/28/56-DAY REVIEW`
 
+### 9. Hand off indexing after approval and production verification
+
+Google can discover pages automatically through crawlable internal links and the XML sitemap, but discovery and indexing are not guaranteed. Do not request indexing while a page is only on Vercel or merely merged.
+
+After Sebastian approves the page and the AWS production deployment is independently verified:
+
+1. verify the public URL returns `200`, renders the approved content, uses the intended self-canonical and is not `noindex`;
+2. verify the URL appears in `https://codespring.app/sitemap.xml` and has crawlable internal links from the relevant hub/related pages;
+3. verify the sitemap is already submitted in the correct Search Console property; submit or refresh the sitemap only when needed rather than repeatedly every day;
+4. for a small number of priority URLs, open URL Inspection in Search Console, test the live URL and use **Request indexing**;
+5. record the request date and monitor the Page indexing/URL Inspection status—do not repeatedly resubmit the same URL;
+6. report separately: `AWS LIVE / VERIFIED`, `SITEMAP VERIFIED`, `SEARCH CONSOLE REQUESTED`, and `INDEXED / VERIFIED`.
+
+[Google's recrawl guidance](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl) says crawling can take from a few days to a few weeks, individual URL requests have quotas, repeated requests do not make crawling faster, and a crawl request does not guarantee inclusion. For many URLs, the sitemap is the discovery mechanism; URL Inspection is for a small priority set.
+
+The founder handoff must say exactly what happens next: approve revisions → merge → AWS deploy → production QA → sitemap/internal-link verification → Search Console request for priority URLs → monitor indexing and performance.
+
 ## Durable daily register
 
 Keep one row per candidate/page with:
@@ -120,7 +137,7 @@ Use the register to prevent duplicate pages, lost review URLs and unmeasured pub
 A morning run is complete only when:
 
 - five evidence-backed opportunities are ranked;
-- up to three complete pages have verified remote review URLs, or blockers are explicit;
+- up to five complete pages have verified remote review URLs, with explicit reasons for every withheld slot;
 - one or two video briefs are selected when video materially helps;
 - no page is called published or live;
 - the durable register and founder review packet are updated.

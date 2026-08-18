@@ -51,6 +51,18 @@ Repeat only when a second video materially improves the day's pages.
 
 - {{missing proof, source, product claim approval, screenshot, review access or deployment dependency}}
 
+## Indexing handoff — after approval and AWS deployment
+
+- **Public URL:** {{production URL}}
+- **AWS production QA:** {{AWAITING DEPLOYMENT | LIVE / VERIFIED}}
+- **Canonical/noindex:** {{verified result}}
+- **Sitemap:** {{present / missing / submitted}}
+- **Internal discovery links:** {{verified hub/related URLs}}
+- **Search Console:** {{NOT REQUESTED | REQUESTED on date | INDEXED / VERIFIED}}
+- **Next action:** {{exact owner/action}}
+
+Do not request indexing for a Vercel preview or merged-but-undeployed page. For a few priority pages, use Search Console URL Inspection after production verification. Do not repeatedly request the same URL; Google states this does not make crawling faster and indexing is not guaranteed.
+
 ## After feedback
 
 1. Apply requested revisions.
