@@ -59,6 +59,16 @@ For each selected page:
 - set title, description, canonical, schema decision, sitemap/index state and CTA;
 - run contract tests and render the finished page.
 
+Before founder review, run a plain-language editing pass that protects meaning rather than chasing a low word count:
+
+- define the term with ordinary words such as `done`;
+- make each causal chain explicit: original feature → later change → regression → check or test;
+- replace compressed fragments or concatenated states with complete natural sentences;
+- use bullets for three or more parallel checks, edge cases, steps or outcomes;
+- break up dense prose with useful lists, examples, screenshots or diagrams, not decorative cards;
+- read the page aloud and rewrite any sentence whose subject, action or result is unclear;
+- verify every first-person experience against founder feedback or a first-party source.
+
 Do not publish filler, doorway pages, fake FAQs, fabricated benchmarks, copied SERP text or AI-redrawn product UI.
 
 ### 4. Produce accessible review URLs
