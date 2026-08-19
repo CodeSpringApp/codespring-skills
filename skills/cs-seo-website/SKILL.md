@@ -1,7 +1,7 @@
 ---
 name: cs-seo-website
 description: "Use when growing CodeSpring site SEO, content, or listings."
-version: 0.4.0
+version: 0.5.0
 author: CodeSpring
 metadata:
   tags: [codespring, seo, marketing-site, search-console, content, link-building]
@@ -121,6 +121,19 @@ Use `references/daily-seo-content-desk.md` for the full selection, build, video,
 Use tutorials for problems the product demonstrably solves: planning an AI-built app, turning requirements into PRDs, project/task sequencing, importing a codebase, and connecting coding agents. Lead with the reader’s outcome, give a real walkthrough/example, then use a direct CodeSpring CTA.
 
 Do not write generic AI filler or dozens of slight keyword variants. One high-quality tutorial with original examples and internal links beats a thin post farm.
+
+#### Write for beginners without flattening the meaning
+
+Plain English does not mean chopping every thought into the fewest possible words. Sentence length and reading-grade scores are checks, not quotas. Keep enough context for the reader to understand what changed, what broke and why the lesson matters.
+
+- Prefer ordinary language: say a feature is `done`, not that somebody can `call it finished`.
+- Keep the subject, action and result clear. Avoid compressed lines such as `The main screen worked. The blank form, failed save or next step did not.` Rewrite the full causal example.
+- Do not concatenate several states into one sentence merely to reduce word count. If three or more checks sit at the same level, introduce them and use bullets.
+- Use a real sequence: what was built, what initially worked, what changed later, what broke, and which acceptance check or test would catch the regression.
+- For example, explain that a CSV upload worked, a later data-processing change broke the upload, and the original upload tests should still pass after the new work.
+- Use paragraphs for explanation and bullets for parallel checks, edge cases, steps or outcomes. A long wall of prose is not beginner friendly.
+- Read the copy aloud. If a sentence is grammatically short but hard to understand without guessing the missing connection, rewrite it rather than shortening it further.
+- First-person founder lessons must come from Sebastian's feedback, first-party videos, call transcripts or recorded CodeSpring experience. Never invent the experience to make a page sound personal.
 
 ### Editorial comparison and guide pages
 
