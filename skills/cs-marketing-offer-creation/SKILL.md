@@ -1,24 +1,19 @@
 ---
 name: cs-marketing-offer-creation
 description: >
-  Design a paid-ads offer from evidence rather than opinion. Tears down what
-  competitors are already running in the Meta Ad Library, ranks offers by
-  survival and creative duplication, scrapes the landing pages behind the
-  winning ads, then writes the offer, its price ladder, its order bumps and its
-  back end into a durable teardown document. Use when designing or rewriting a
-  front-end offer, a webinar or event registration page, an order bump, or an
-  upsell. Triggers, "research offers", "what offers are working right now",
-  "tear down this funnel", "scrape the ad library", "design a front-end offer",
-  "what should our webinar promise be", "competitor ad research", "why is our
-  CPC so high".
+  Design or sharpen a commercial offer from customer-call evidence or competitor
+  ad research. Use for front-end promises, profit versus pain-relief angles,
+  price ladders, webinar offers, order bumps, or funnel teardowns. Produces a
+  claim-checked offer brief; does not build or publish the page.
 ---
 
-# Offer creation from ad-library evidence
+# Offer creation from customer and market evidence
 
 ## Overview
 
-Produce an offer backed by what the market is already paying to run. The output
-is a teardown document plus a specified offer, not a hunch. Consumes market
+Produce a specified offer with explicit evidence and unresolved assumptions.
+Use customer evidence for a quick offer decision and market research when the
+user wants competitive validation. Consumes market
 context from `cs-marketing-research`; hands its offer to `cs-marketing-website`
 for the page build.
 
@@ -28,13 +23,31 @@ must not copy competitor copy into production — quote it as evidence only.
 Apify runs cost credits, so ask before using the paid route when a free one
 exists.
 
+## Choose the mode
+
+- **Call-informed offer:** the user supplies calls, pains, current copy or asks
+  for a few simpler offers. Read [call-informed offers](references/call-informed-offers.md),
+  use that workflow and stop at the requested draft. Do not force an Ad Library
+  sweep or a full price ladder before giving useful options.
+- **Market teardown:** the user asks what competitors run, current market
+  evidence or funnel research. Follow sections 1–6 below. Longevity and
+  duplication are observations, not proof of profitability.
+- **Combined:** use the calls to choose the hypothesis, then research alternatives
+  only to the depth requested. Keep prospect evidence separate from ad proxies.
+
+In all modes, distinguish verified results, user-reported claims, hypotheses and
+illustrative targets. Revenue is not profit; saved hours are not automatically
+cash savings. Never move proof from one buyer or business model into another.
+Publishing, ad spend and new customer obligations require separate authority.
+
 ## 1. Frame the decision
 
 State before researching: the product being sold, the avatar, the traffic
 source, the price the back end needs to support, and the CPC or cost-per-lead
 target. An offer designed without a back-end price is a guess.
 
-If any of these are missing, ask. Do not research generically.
+Ask only when a missing input changes the research decision; otherwise state
+the assumption. Unknown back-end pricing can remain an explicit gap in a draft.
 
 ## 2. Pull the ads
 
@@ -93,11 +106,11 @@ unavailable.
 
 Five rules decide everything downstream.
 
-1. **A duplicated creative is a winner.** `N ads use this creative` means one creative across N ad sets. Nobody duplicates twenty-four times to test; they duplicate because it already won. This is the only free profitability signal that exists.
-2. **Many creatives with no duplication means still testing.** Judge nothing until it survives.
-3. **Mass inactivity kills an angle.** If an angle sits entirely in `active_status=inactive`, it was tried at volume and abandoned. Do not re-run it as though it were undiscovered.
-4. **Age beats volume.** One ad alive 150 days outranks ninety ads alive three weeks. Spend fakes volume; it cannot fake survival.
-5. **Durations are floors.** Meta resets the start date on material edits.
+1. **Duplication is a prioritisation signal, not a confirmed winner.** Record the library's displayed grouping literally; do not infer spend, ad-set count or profitability without account data.
+2. **Many variants may indicate testing.** State the inference, not certainty about the operator's strategy.
+3. **Inactivity needs context.** An ended campaign may be seasonal or budget-limited. Do not pronounce an entire angle dead from status alone.
+4. **Age helps select research candidates.** Long-running ads merit inspection, but survival does not establish return on spend.
+5. **Record observation dates and displayed dates.** Do not infer a complete uninterrupted history from a snapshot.
 
 Also compute `active ÷ (active + inactive)` per keyword for the survival rate of
 the space, and cross-check each operator's brand keyword against their personal
@@ -108,9 +121,10 @@ name — the oldest ad is often a different, older offer.
 Fetch the destination URLs from step 2. Funnel pages are usually JS-rendered; if
 a fetch returns only the footer or a 403, load it in a browser instead.
 
-Capture verbatim, never paraphrased: headline, sub-headline, every bullet, form
-fields, CTA button text, countdown or date language, price, guarantee, and proof
-claims. Paraphrase destroys the evidence.
+Capture source URLs and exact short excerpts where permitted, especially the
+headline and CTA. Summarise longer third-party material within source-use limits,
+clearly labelling paraphrases. Record price, guarantee, date language and proof
+claims without copying entire copyrighted pages into the deliverable.
 
 **Evergreen tell:** a CTA reading "See The Next Workshop Time" or "STARTING 8PM
 TONIGHT" with a rolling countdown, rather than a fixed calendar date.
@@ -138,31 +152,34 @@ One entry per offer. Name the offer so it can be argued about.
 
 Test the draft against what the teardown shows.
 
-- **Does the promise end at money?** Offers that stop at a capability die young. Offers that close the loop to revenue survive.
-- **Is the number in the first line?** Winning pages lead with a specific figure and make it the reader's future, not the founder's past.
-- **Is the front end in the proven band?** Free registration, or roughly $7–$97. Anything above needs a free front door in front of it.
-- **Is there an order bump?** A single front-end price rarely liquidates ad spend. Bumps should sell the half the core product does not deliver.
-- **Is the back end an outcome rather than more software?** Winning back ends sell the result; the software is the delivery mechanism.
-- **Is there one door per avatar?** Separate registration pages feeding one event beat one page trying to address everyone.
-- **Is the proof aggregate?** Customer averages travel further, and survive scrutiny better, than founder claims.
+- **Is the result commercially meaningful?** Connect the capability to the buyer's actual job, profit or operational constraint. Do not force a money promise when the evidence supports relief instead.
+- **Does a number clarify the outcome?** Use substantiated amounts or clearly labelled demonstration scope; never invent a percentage for impact.
+- **Does the price match the deliverable and economics?** Competitor price bands are observations, not universal limits.
+- **Would a bump add distinct value?** Do not add one automatically or hide what the core purchase lacks.
+- **Is the back end a credible outcome with a delivery mechanism?** Keep its licence, implementation and ongoing costs distinct from a low-ticket educational front end.
+- **Is there one primary buyer per page?** Separate materially different buying motives, rather than writing a page for everybody.
+- **Does proof match this claim and buyer?** Neither founder results nor customer averages guarantee the prospect's outcome.
 
 ## 7. Artifacts
 
-- A dated teardown document in the project's research folder.
+- A dated teardown document for market mode, or a concise call-informed offer brief.
 - A specified offer: promise, avatar, format, price ladder, bumps, back end.
+- A claim ledger: wording, source, evidence status and unresolved validation.
 - A concise ingest into Atlas so later work inherits the decision.
 
 ## 8. Verification
 
-Do not report completion without: the query strings used, ad and duplication
-counts per operator, at least one verbatim landing page per shortlisted offer,
-and an explicit statement of what was not covered.
+For market mode, report query strings, observed counts and dates, source pages
+with permitted excerpts, and sampling limits. For call-informed mode, report
+the buyer, outcome, obstacle, mechanism, actual deliverable, terms and claim
+gaps. Preserve the user's selected copy. Do not build the page without authority.
 
 ## 9. Status language
 
-Use `draft`, `dogfooding`, `proven`, `deprecated` exactly as defined in
-`docs/skill-governance-sop.md`. An offer that has not run traffic is `draft`,
-however good the research is.
+Skill maturity uses `draft`, `dogfooding`, `proven`, `deprecated` per governance.
+Deliverable status uses `DRAFT`, `READY`, `AWAITING APPROVAL`, `LIVE / VERIFIED`
+or `BLOCKED`. A selected brief can be READY for implementation while its market
+performance remains unproven. Never claim a target conversion rate was achieved.
 
 ## Pitfalls
 
@@ -170,7 +187,7 @@ however good the research is.
 - **Reading raw ad counts as spend.** Ad count without the duplication breakdown misreads eight winning creatives as eighty tests.
 - **Treating an empty lane as opportunity.** Usually it means unproven demand, not undiscovered demand. Say which you believe and why.
 - **Copying competitor copy.** Quote it as evidence; never ship it.
-- **Claiming conversion insight.** Longevity and duplication are profitability proxies. Nothing in the Ad Library measures conversion, and no spend data exists for US-targeted ads.
+- **Claiming conversion insight.** Public longevity and duplication observations do not reveal conversions or prove profit. State exactly which account metrics, if any, were available.
 - **Sampling silently.** Every sweep is impressions-sorted and sampled from the top. State what was left uncovered.
 
 ## Handoff

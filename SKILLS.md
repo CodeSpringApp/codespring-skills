@@ -58,7 +58,7 @@ Anything that must give the same answer every run is a script in `codespring/scr
 | `cs-build-feature` | build | draft | 0.1 | Interactive build: readiness check → tasks → build (up to 5 sub-agents) with break-risk guards. |
 | `cs-build-resync-codebase` | build | draft | 0.1 | Read-only-on-code staleness check; updates CodeSpring to match the built code. |
 | `cs-marketing-research` | marketing | draft | 0.1 | Research market demand, alternatives, positioning, and a defensible wedge before committing work. |
-| `cs-marketing-offer-creation` | marketing | draft | 0.1 | Design a paid-ads offer from evidence: Meta Ad Library teardown ranked by survival and creative duplication, landing pages behind the winning ads, then the offer, price ladder, order bumps and back end as a durable teardown document. |
+| `cs-marketing-offer-creation` | marketing | draft | 0.2 | Customer-call offer briefs or Meta Ad Library teardowns: one buyer, specific result, real obstacle, claim ledger and clear front/back-end terms. Keeps ad observations separate from profit proof; hands approved copy to website work. Call-informed path reviewed against founder iteration, not yet independently forward-tested. |
 | `cs-marketing-website` | marketing | dogfooding | 0.1 | Build and maintain the page inventory, proof map, conversion paths, and founder-facing NOW/NEXT/LATER/BLOCKED website workboard. |
 | `cs-seo-website` | seo | dogfooding | 0.5 | CodeSpring SEO daily desk: targets evidence-gated review pages, uses founder-grounded plain-English tutorials with complete causal examples, supplies remote previews, then hands approved URLs into indexing verification. |
 
