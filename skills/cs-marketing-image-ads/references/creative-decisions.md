@@ -28,6 +28,27 @@ product mockups when they make the bundle feel real. Do not add old courses,
 playbooks, community or starter kits. Any “24 hours” or “today only” version is
 valid only for a real dated campaign window.
 
+### Accepted founder-led price hierarchy
+
+In the September 2026 Discovery Engine set, the accepted creative used a warm,
+professional founder portrait above three compact product cards. The lower
+section contained one headline, one value-versus-price row and one guarantee
+line. The user selected it because it looked professional and could be scanned
+without effort.
+
+- `$1,594 VALUE` used cool-grey type, a thin outline, no fill and one clean
+  strike-through.
+- `JUST $27` used black type on a solid gold fill.
+- Both prices sat on the same row, while the current price had much greater
+  contrast and visual weight.
+- There was no extra button, sticker or explanatory paragraph competing with
+  the offer.
+
+The founder created trust, the three cards made the bundle tangible, the
+headline stated the action and the price row closed the offer. Reuse this
+hierarchy when the value anchor is the main creative idea. Acceptance is useful
+direction evidence, not evidence of paid performance.
+
 ## Build from the buying situation
 
 An image ad is the visible end of a commercial chain. Write this short brief

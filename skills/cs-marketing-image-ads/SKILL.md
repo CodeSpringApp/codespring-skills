@@ -96,7 +96,8 @@ carry most of the explanation. Default on-image copy to only:
 
 1. A specific, recognisable pain or wanted change in the headline.
 2. The offer and price, unless the headline already contains them.
-3. One clear CTA consistent with the destination.
+3. One clear action cue consistent with the destination. This can be a CTA or,
+   in a stripped-back direct-offer layout, the dominant current-price block.
 4. One short guarantee line or badge when the current offer has verified,
    applicable terms.
 
@@ -126,7 +127,8 @@ Its job is to make the stack understandable in one glance:
 - audience or wanted change;
 - total package value versus purchase price;
 - one short label for each real deliverable;
-- one CTA, plus only an authorised guarantee or real deadline.
+- one CTA or dominant current-price block, plus only an authorised guarantee or
+  real deadline.
 
 Keep the explanations in the primary text and landing page. On the image, three
 product names with their values are useful because they show three actual
@@ -140,6 +142,31 @@ Engine Agent ($1,122), Agentic Business Case Study ($197) and Launch-Ready 1:1
 Call ($275), totalling $1,594 for $27. Do not add courses, playbooks, community,
 starter kits or any other product absent from the current offer. Treat “next 24
 hours” and “today only” as time-bound variants that require a real run window.
+
+### Founder-led value-anchor layout
+
+When the user accepts a founder-led offer image because it is clean and easy to
+read, preserve the hierarchy that made it work. Use this as a preferred direct-
+offer variant rather than making every concept follow the same composition:
+
+1. Put a polished founder portrait in the upper section. Use a credible studio
+   or office, natural eye contact, good clothing and a calm pose. The founder
+   makes the offer feel real and trustworthy; they do not need to mime stress.
+2. Show two or three simple, tangible product cards at the transition between
+   portrait and copy. Use short product labels and believable previews. Remove
+   floating screens, extra badges and decorative effects.
+3. Use one large action or outcome headline, normally no more than two lines.
+4. Put the value comparison on one row. Show the old package value in a
+   transparent or dark outlined box with cool-grey type and one clean strike-
+   through. Put the current price in a solid accent box, such as gold, with
+   high-contrast type and much greater visual weight.
+5. Finish with one quiet guarantee line. A separate CTA is optional when the
+   current-price block already functions as the obvious action cue.
+
+At phone-feed size, the eye should move through founder, product stack,
+headline, current price and guarantee. Remove anything that interrupts this
+sequence. Use one accent colour and generous negative space. More information
+is not more persuasion.
 
 When the target is an established nontechnical owner seeking AI workers, keep
 the qualification visible in the brief: they already have staff and customers,
