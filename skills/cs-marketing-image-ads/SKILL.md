@@ -117,6 +117,30 @@ Different ads must test materially different buyer incidents, motives, promises
 or mechanisms. Recolouring the same bundle, portrait and headline structure is
 not a new strategic concept.
 
+### Pure offer and bundle-stack concepts
+
+A batch does not have to make every creative pain-led. When the package value,
+price and real deliverables form a strong bargain, include a pure offer concept.
+Its job is to make the stack understandable in one glance:
+
+- audience or wanted change;
+- total package value versus purchase price;
+- one short label for each real deliverable;
+- one CTA, plus only an authorised guarantee or real deadline.
+
+Keep the explanations in the primary text and landing page. On the image, three
+product names with their values are useful because they show three actual
+things the buyer receives. Three paragraphs describing what one product can do
+are not useful. Represent digital products as believable, tactile assets such
+as a software device, case-study screen and call/calendar card rather than a
+course pile or a generic laptop.
+
+For the approved AI business-discovery bundle, the current stack is Discovery
+Engine Agent ($1,122), Agentic Business Case Study ($197) and Launch-Ready 1:1
+Call ($275), totalling $1,594 for $27. Do not add courses, playbooks, community,
+starter kits or any other product absent from the current offer. Treat “next 24
+hours” and “today only” as time-bound variants that require a real run window.
+
 When the target is an established nontechnical owner seeking AI workers, keep
 the qualification visible in the brief: they already have staff and customers,
 are comfortable trying AI tools, and may have a CRM, dashboard, command centre

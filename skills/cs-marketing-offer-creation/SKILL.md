@@ -138,6 +138,49 @@ Then specify:
 - **Downstream bridge:** why a suitable buyer would reasonably want the later
   product, without implying it is included now.
 
+## Use direct bundle-offer mode when the stack is the hook
+
+When the user supplies offer copy and explicitly says it is the version they
+were trying to reach, treat its structure and commercial emphasis as
+`USER DIRECTION`. Preserve it as the canonical baseline. Do not force it back
+through a longer founder story, a mandatory historical revenue opening or an
+abstract result-only headline unless the user asks for another mode.
+
+A low-ticket bundle can be strongest when the bargain itself is immediately
+clear. Use this shape when the actual product stack and price do the selling:
+
+1. A plain audience callout when it helps qualification.
+2. The concrete package value and purchase price in the opening.
+3. One short recognition moment in the buyer's language.
+4. “Here is what you get,” followed by the real deliverables. For each, name
+   the product, its supported value and why it is useful.
+5. Total value, current price and one direct CTA.
+
+This is not the same as turning the copy into a repetitive capability list.
+Three separately fulfilled products are a genuine offer stack. Repeating the
+same agent functions under several headings is padding. Keep the recognition
+section short and let each deliverable earn its place.
+
+Do not lead only with an unfamiliar product name. A cold buyer may not know
+what a “Discovery Engine” is. Pair the stack with the wanted change, such as
+getting useful work off the owner, creating capacity to scale or working out
+where AI can save money and what to build first. The tool is the mechanism.
+
+For the current AI business-discovery bundle, the approved campaign example is:
+
+- AI Business Discovery Engine Agent: stated value $1,122. It is a
+  tool-equipped conversational agent with web research and knowledge of agent
+  infrastructure, not merely a static plan or generic chatbot.
+- Agentic Business Case Study: stated value $197. The reported move from
+  $50/month to over $2,000/month is seller-side case-study evidence, not a
+  buyer earnings guarantee.
+- Launch-Ready One-to-One Call: stated value $275.
+- Stated total value: $1,594. Purchase price: $27.
+
+Use these exact figures only for this approved offer or when the user supplies
+them again. A “next 24 hours” or “today only” line is a dated campaign variant;
+never turn it into evergreen or resetting scarcity.
+
 Keep outcome, obstacle and mechanism separate while reasoning, then compress
 them into a direct offer the buyer can repeat. A useful starting shape is:
 

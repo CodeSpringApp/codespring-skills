@@ -3,6 +3,31 @@
 These are reusable examples, not fixed offers, brand rules or performance claims.
 Use the current user's audience, destination and supplied references.
 
+## Direct bundle creative
+
+When the user has approved a concrete low-ticket stack, the offer itself can be
+the visual idea. A strong pure-offer creative can lead with the total value and
+price, then show one compact label for each genuinely separate deliverable.
+This is different from pasting a feature list onto the image.
+
+Current approved CodeSpring example, supplied by the user:
+
+- AI Business Discovery Engine Agent, stated value $1,122
+- Agentic Business Case Study, stated value $197
+- Launch-Ready 1:1 Call, stated value $275
+- total stated value $1,594; purchase price $27
+
+The Discovery Engine is a conversational, tool-equipped agent with web research
+and knowledge of agent infrastructure. It should not be depicted as only a PDF
+plan, course or generic chat bubble. The case study and call are separate
+products, so showing all three does not violate the one-main-idea rule.
+
+The image copy should normally stop at the offer, price, three short labels and
+CTA. Put the useful explanation in primary text. Use physical-looking digital
+product mockups when they make the bundle feel real. Do not add old courses,
+playbooks, community or starter kits. Any “24 hours” or “today only” version is
+valid only for a real dated campaign window.
+
 ## Build from the buying situation
 
 An image ad is the visible end of a commercial chain. Write this short brief
