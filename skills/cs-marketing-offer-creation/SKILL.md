@@ -9,6 +9,39 @@ description: >
 
 # Offer creation from buyer evidence
 
+## Non-negotiable clarity gate
+
+Before keeping any sentence, ask:
+
+> Does this sentence ADD anything/answer any confusion?
+
+If it does neither, remove it. Do not keep a line because it sounds polished,
+creates rhythm, or gestures at a benefit already stated elsewhere. Every line
+must introduce useful information, make the offer more concrete, resolve a
+likely objection, explain a necessary dependency, or move the buyer to the
+next action.
+
+Reject copy that creates more questions than it answers. For example, “Know
+where Ai fits before you build” is not clear enough: fits where, and build what?
+“Your team stays in control” is also incomplete unless the offer says what the
+team controls. Prefer a concrete deliverable such as: “Get a technical plan,
+with step-by-step instructions on how to build a custom Ai agent.” A useful
+supporting line can then explain why it matters: “You can’t build a dependable
+Ai agent without a proper technical plan. Get one built correctly, so your
+agent doesn’t keep breaking, for just $49.”
+
+On the final edit, interrogate every sentence:
+
+- What new information does this add?
+- Which specific confusion or objection does it answer?
+- Are the subject, action, object and result concrete on first reading?
+- Does it introduce an undefined phrase that makes the buyer ask “what does
+  that actually mean?”
+
+If there is no precise answer, delete or rewrite the sentence. This rule is
+non-negotiable and overrides stylistic preferences, clever phrasing, rhythm and
+the desire to make the offer sound more “marketing.”
+
 ## Outcome and scope
 
 Produce a specific offer that the intended buyer can recognise, understand and
