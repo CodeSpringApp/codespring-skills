@@ -3,6 +3,78 @@
 These are reusable examples, not fixed offers, brand rules or performance claims.
 Use the current user's audience, destination and supplied references.
 
+## Build from the buying situation
+
+An image ad is the visible end of a commercial chain. Write this short brief
+before developing visuals:
+
+| Decision | Question |
+|---|---|
+| Buyer | What must already be true of the business and decision-maker? |
+| Audience state | What have they tried, what keeps happening, and what do they understand today? |
+| Motive | Which immediate pain and larger ambition make this worth acting on? |
+| Mechanism | Why can this offer create progress where their current approach has not? |
+| Front-end deliverable | What do they actually receive from this click or purchase? |
+| Downstream objective | What later sale should this attract qualified demand for? |
+| Evidence | Which claims come from observed language/results, and which remain hypotheses? |
+
+Keep hypotheses useful but visible. A seller may reasonably believe customers
+want more product usage or revenue, but that is not customer evidence until a
+call, behaviour or result supports it. Likewise, working systems plus continuing
+management burden do not prove that AI created more work. Test the sharper
+interpretation as a hypothesis rather than narrating it as a known pain.
+
+### Anonymised example: AI discovery for established businesses
+
+Suppose the required buyer already has staff and customers, is comfortable
+trying AI tools, and may have self-built a CRM, dashboard or prototype. They can
+use software but do not understand the deeper infrastructure, memory, tool
+connections and guardrails needed for dependable agents. The low-ticket front
+end (for example, £27) is a conversational discovery engine: it asks about the
+business and what already exists, then helps identify useful agent work,
+required connections, approvals and what to prioritise. The seller's capability
+knowledge powers this mechanism internally. Cold traffic should not need to know
+the vendor or platform. Its commercial purpose is to qualify suitable buyers
+for later high-ticket implementation, which the low-ticket purchase does not
+include.
+
+Two motives warrant separate creative families:
+
+| Motive | Recognisable incident | Ambition | Mechanism/offer bridge |
+|---|---|---|---|
+| AI workers for internal operations | The owner has working systems but still checks handoffs, handles exceptions and manages the work around them | Recurring work completes with less owner supervision | The discovery engine maps the workflow, connections, memory and guardrails, whether the worker lives inside a command centre or runs in the background across cloud tools |
+| Agents inside customer software | The business is building or already has customer software but does not know how to make an agent a dependable part of it | Customers can get useful work done through an agent inside the software | The discovery engine maps the user job, the product touchpoint and a realistic in-product agent opportunity |
+
+The exact promise must match the real deliverable. “Work out where AI can do
+useful work in your business” can fit a discovery offer. “We install an
+autonomous workforce” cannot fit unless implementation is actually included.
+Avoid abstract headlines such as “Unlock AI for your business” and seller-led
+headlines such as “See what our platform can do”; the buyer cannot recognise
+their situation or the reason to click.
+
+### Example direction set: direct AI discovery offer
+
+This set shows how one discovery offer can test five recognisable entry points
+without adding explanatory paragraphs to the artwork. It is an example from a
+current campaign, not a universal template or a performance claim.
+
+| Direction | Sparse on-image copy | Visual mechanism |
+|---|---|---|
+| Direct offer | `USE THIS $27 AI DISCOVERY ENGINE TO FIND WHERE AI FITS IN YOUR BUSINESS AND HOW TO BUILD IT IN` + `GET THE AI DISCOVERY ENGINE` | A business, its people, current tools and existing build feed into one discovery engine; a prioritised AI opportunity map and build path emerge |
+| Broad outcome | `FIND OUT WHAT AI COULD DO FOR YOUR BUSINESS` + `THE AI DISCOVERY ENGINE BUNDLE` + `GET IT FOR $27` | A messy operating map is scanned and three useful jobs light up across the real workflow |
+| Existing CRM | `BUILT A CRM WITH AI BUT STILL DOING ALL THE WORK?` + `AI DISCOVERY ENGINE · $27` + `GET THE DISCOVERY ENGINE` | The CRM exists, but every task route still ends at the owner; the discovery path reroutes suitable work to an AI worker |
+| Disconnected AI | `CAN’T GET AI WORKING FOR YOUR BUSINESS?` + `AI DISCOVERY ENGINE · $27` + `GET THE BUNDLE` | Disconnected tools, data and half-built automations are assembled into one believable working sequence |
+| Customer software | `WANT AI AGENTS INSIDE YOUR SOFTWARE?` + `AI DISCOVERY ENGINE · $27` + `GET STARTED` | A customer product shows a real user job moving from manual clicks to an embedded agent completing the task inside the product |
+
+Keep the visual-mechanism description in the brief and generation prompt. Do
+not render it as body copy. Avoid a generic laptop-only scene: the viewer should
+see what goes in, what the discovery does and what useful output comes out.
+When the current product terms verify a 30-day refund, include
+`30-DAY MONEY-BACK GUARANTEE` as a compact, subordinate guarantee badge. Do not
+turn it into a guarantee of an AI implementation or business result.
+For Sebastian's ads, omit full stops at the end of these headlines; a question
+mark is intentional when the headline is a question.
+
 ## Sell the next action
 
 | Destination | Useful ad promise | Common mismatch |
