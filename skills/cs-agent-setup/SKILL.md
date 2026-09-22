@@ -12,7 +12,7 @@ description: >
 allowed-tools: Bash(npx:*) Bash(npm:*) Bash(bun:*) Bash(node:*) Bash(curl:*) Bash(git:*) Bash(rg:*) Bash(sed:*) WebSearch WebFetch
 metadata:
   author: codespring
-  version: "0.1"
+  version: "0.2"
 ---
 
 # Set up a working CodeSpring agent
@@ -72,6 +72,7 @@ Load `customer-tools` too when the app will expose its own API/database operatio
 | [`references/dashboard-guide.md`](references/dashboard-guide.md) | Always when guiding a person through the web app. Defines every page and term in basic English, the correct click order, updates, Playground, and local-vs-hosted behavior. |
 | [`references/development-and-production.md`](references/development-and-production.md) | Always. Explains why development and production are separate, what does not copy, and the explicit promotion checklist. |
 | [`references/control-plane-and-models.md`](references/control-plane-and-models.md) | Always. Explains provider connections, model IDs, drafts, immutable revisions, environments and browser credentials. |
+| [`references/deployment-credentials-and-ids.md`](references/deployment-credentials-and-ids.md) | The person asks which key, ID or environment variable to use; a local app is moving to Vercel/another host; or a public site will temporarily use a development agent. |
 | [`references/tools-and-generative-ui.md`](references/tools-and-generative-ui.md) | The agent needs research, SEO, app/database actions, charts, choices, cards or dynamic report UI. |
 | [`references/troubleshooting-and-proof.md`](references/troubleshooting-and-proof.md) | Setup is confusing, the UI waits forever, an agent/tool is missing, a revision changed, or before claiming completion. |
 
@@ -87,6 +88,12 @@ Write down these six values first:
 6. existing agent ID and published revision, if any.
 
 Do not infer production from a deployed URL or development from localhost. Development and production are separate control planes. Repeat the workspace and environment in every status update involving a remote write.
+
+Also separate the hosting provider's labels from CodeSpring's labels. A Vercel
+deployment named `Production` can deliberately use a CodeSpring `development`
+agent for a temporary public beta. Say **development-backed public beta**, not
+**production agent**, and record that boundary until the real production copy
+is published and verified.
 
 If the user is working in the dashboard, point out the **workspace** and **environment** selectors in the top bar before naming any sidebar page. Read `references/development-and-production.md` and explain the difference before asking them to configure the same product twice.
 
@@ -185,6 +192,11 @@ Publishing creates a new immutable revision. Call it **LIVE / VERIFIED** only af
 Install `@codespring-app/use-agent`. `createAgent({ id, revision })` creates a local reference to an already-published agent; it does not create or update the hosted agent.
 
 Server code may use the scoped Agents API key. Browser code may not. Implement `/api/agents/token` in the application server: authenticate the app user, request a five-minute client token from CodeSpring with the exact browser origin, session scopes and allowed published agent revision, then return only `{ token, expiresAt }` with `Cache-Control: no-store`.
+
+Before giving deployment environment values, load
+`references/deployment-credentials-and-ids.md`. Never tell the person to paste
+a provider key into their host when the application needs an **Application
+backend** Agents API key. Never ask them to expose or paste a secret in chat.
 
 Initialize one cached React client:
 
