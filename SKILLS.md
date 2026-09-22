@@ -7,7 +7,7 @@ Working tracker for the CodeSpring skill pack. `npx skills add CodeSpringApp/cod
 ## Architecture
 
 - **`codespring`** is the core skill — the shared knowledge base (how CodeSpring works + the CLI), the canonical `references/`, and the `scripts/` that make the repeatable checks deterministic. It's the "brain." It intentionally keeps its existing name and folder.
-- **Every other skill belongs to a lifecycle family** and is named `cs-<family>-<outcome>`. Families today: **build** (idea or codebase → shipped app), **marketing** (demand, offer, website), **seo**. The family prefix makes the package navigable without relying on unverified nested installer discovery.
+- **Every other skill belongs to a lifecycle family** and is named `cs-<family>-<outcome>`. Families today: **build** (idea or codebase → shipped app), **agent** (CodeSpring Agents setup and operation), **marketing** (demand, offer, website), **seo**. The family prefix makes the package navigable without relying on unverified nested installer discovery.
 - **One skill owns one completed capability.** Detailed subflows live in its `references/`, reusable outputs in `templates/`, deterministic helpers in `scripts/`. Family skills stay lean and point at the core skill's references (e.g. `references/mindmap-structure.md`) rather than duplicating them.
 
 The build family chains:
@@ -57,6 +57,7 @@ Anything that must give the same answer every run is a script in `codespring/scr
 | `cs-build-handoff` | build | draft | 0.1 | **The plan is the product — this is the delivery.** Plain-English client pack: what we're building, the mockup, build order as phases, assumptions, open questions, what they owe, and what to do next. Runs after `cs-build-create-tasks`. |
 | `cs-build-feature` | build | draft | 0.1 | Interactive build: readiness check → tasks → build (up to 5 sub-agents) with break-risk guards. |
 | `cs-build-resync-codebase` | build | draft | 0.1 | Read-only-on-code staleness check; updates CodeSpring to match the built code. |
+| `cs-agent-setup` | agent | dogfooding | 0.1 | Set up or repair a CodeSpring agent end to end: environment, stable model route, immutable revision, skills/tools/MCP, secure server/browser credentials, progressive generative UI and a replay-backed `AGENT_SETUP.md` receipt. Dogfooded on the BuildProof research agent; excludes provider-specific incident workarounds. |
 | `cs-marketing-research` | marketing | draft | 0.1 | Research market demand, alternatives, positioning, and a defensible wedge before committing work. |
 | `cs-marketing-offer-creation` | marketing | draft | 0.3 | Design or sharpen an offer from customer evidence and product truth, preserving ICP qualification, cold-traffic language, front-end boundaries and the downstream sale. Supports direct bundle/value-stack offers without forcing every campaign into a founder story. Uses competitor/ad-library research only when it resolves a real uncertainty. Names the purchase-specific result in refund guarantees while preserving the existing refund window and rights. |
 | `cs-marketing-image-ads` | marketing | dogfooding | 0.4 | Determine the qualified buyer, cold-traffic front-end message and downstream commercial objective, then create or revise static paid-social image ads. Separates evidence from hypotheses, discovery from implementation, and distinct purchase motives from cosmetic variants. Supports sparse visual mechanisms, pure bundle stacks and an accepted founder-led value-anchor hierarchy. Dogfooded through repeated CodeSpring ad creation and direct founder review; paid performance remains unproven. |
@@ -91,6 +92,9 @@ Anything that must give the same answer every run is a script in `codespring/scr
 | `v1-scope.md` | `cs-build-plan-app` | One loop whole; cut breadth not depth; **doing features vs tracking features** (the most common way an idea-plan goes wrong); the revenue gate; when the real cost is content rather than code; naming the cuts. |
 | `design-system.md` | `cs-build-ui-mockup` | **Build before any screen.** Semantic colour tokens, light/dark from day one, one spacing scale, a radius scale with stated relationships (nested corners step down), type scale and line height, components with every state, navigation patterns, motion budget, and how to make the brand swappable — plus the `/styleguide` page. |
 | `review-method.md` | `cs-build-ui-mockup` | Why a written plan cannot express a focal point; what to build (real copy, plausible data, responsive controls); how to run the review **without narrating**; the table of what mockups reliably catch and prose never does; feeding corrections back as note reasons and task blocks; expect two rounds. |
+| `control-plane-and-models.md` | `cs-agent-setup` | The seven-layer model for workspace/environment, provider connections, stable model IDs, drafts, immutable revisions, Agents API keys and browser tokens. |
+| `tools-and-generative-ui.md` | `cs-agent-setup` | Choose between skills, MCP, customer-hosted tools, typed React generative UI and MCP Apps; includes SEO/research and progressive-report patterns. |
+| `troubleshooting-and-proof.md` | `cs-agent-setup` | Symptom-to-layer diagnosis, auth/revision failures, direct runtime and UI smoke tests, and the `AGENT_SETUP.md` evidence receipt. |
 
 ## Scripts
 

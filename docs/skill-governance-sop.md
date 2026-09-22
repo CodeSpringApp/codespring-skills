@@ -33,6 +33,7 @@ cs-<family>-<outcome>
 |---|---|---|
 | `marketing` | market demand, ICP, alternatives, positioning, offer, website, SEO, AEO, content, carousels, video | `cs-marketing-research` |
 | `build` | implementation and code-quality execution | `cs-build-feature` |
+| `agent` | CodeSpring Agents setup, capability wiring, channels, runtime verification and agent operations | `cs-agent-setup` |
 | `release` | deployment, security, observability, production verification | `cs-release-security-audit` |
 | `operate` | customer success, metrics, renewals, recurring operations | `cs-operate-renewals` |
 
@@ -138,6 +139,7 @@ Keep the first release intentionally small:
 - `cs-build-create-prd`
 - `cs-build-create-tasks`
 - `cs-build-feature`
+- `cs-agent-setup`
 - `cs-release-production-readiness`
 - `cs-release-security-audit`
 - `cs-marketing-offer`

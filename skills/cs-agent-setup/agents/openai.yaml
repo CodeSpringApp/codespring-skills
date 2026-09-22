@@ -1,0 +1,4 @@
+interface:
+  display_name: "Set Up a CodeSpring Agent"
+  short_description: "Configure, connect, and prove a working CodeSpring agent."
+  default_prompt: "Set up this app with a working CodeSpring agent, the right environment and model route, its required tools, a secure frontend connection, and end-to-end proof."
