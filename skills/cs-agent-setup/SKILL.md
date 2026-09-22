@@ -19,6 +19,42 @@ metadata:
 
 Produce a working agent, not a dashboard-shaped collection of drafts. The completion artifact is a short `AGENT_SETUP.md` receipt in the application repo plus a real session whose replay proves the model and expected tools ran.
 
+Assume the person does **not** know what an agent, model, provider key, model ID, skill, knowledge base, MCP server, tool, API key, session or published revision is. Explain the plain-English noun before asking them to use it. Give one dashboard action at a time in this form:
+
+> In the top bar, choose **Acme / development**. In the left sidebar, open **Models**. Under **Provider keys**, click **Add key**. This stores the provider account that pays for model calls; it does not choose the model for your agent yet. Success looks like a row marked **active**.
+
+Never say only “publish it”, “change the model”, or “add the tool”. Name the page, section, button, exact resource and environment, then say what visible result confirms the step.
+
+## The two-layer rule
+
+The skill must be technically complete **without making the person become technical**.
+
+### Behind the scenes: exact
+
+The coding agent tracks versions, IDs, environment boundaries, API scopes, schemas, revisions, event cursors, tool contracts, origins and proof. It reads the installed SDK and application code, runs safe commands itself, and preserves the complete detail in `AGENT_SETUP.md`.
+
+### In the conversation: fifth-grade English
+
+Assume the person may have built in Lovable or another AI builder and may not know what GitHub, a repository, codebase, terminal, CLI, API, MCP, SDK or environment means.
+
+- Use one short action at a time.
+- Define an unfamiliar term in the same sentence: “A model is the AI brain that writes the answer.”
+- Start with what the thing does for them, then give its technical name in brackets if useful.
+- Never send a wall of setup instructions before they complete the first human-only step.
+- Do the code, terminal, file inspection and read-only checks yourself when access allows it.
+- Ask the person only for actions that genuinely require them: choosing an account, approving a fresh login code, entering a secret in a secure form, accepting an OAuth consent screen, approving spend or publishing to production.
+- Never tell them to “open the repo”. Say: “Open the project’s code folder—the folder containing files such as `package.json`. If you built it in Lovable and cannot see that folder, tell me whether the project is connected to GitHub.”
+- Never tell them to “use the CLI” without explaining: “The CLI is the small command-line helper your coding agent uses. You do not need to learn it; you only need to approve the login code it opens.”
+- Never tell them to “connect an MCP” without explaining: “An MCP server is a plug that gives the agent a set of outside tools, such as live SEO data.”
+
+At the end of each user-facing step, state:
+
+1. what just changed;
+2. what is still not working or not live;
+3. the single next action.
+
+Do not hide technical failure behind friendly language. Translate it: “The agent exists, but the app is still using version 2. We need to allow version 3 in the app key next.”
+
 This skill complements the version-matched guidance bundled with `@codespring-app/use-agent`; it does not replace it. Read the installed package before copying an old example:
 
 ```bash
@@ -33,6 +69,8 @@ Load `customer-tools` too when the app will expose its own API/database operatio
 
 | Reference | Read when |
 |---|---|
+| [`references/dashboard-guide.md`](references/dashboard-guide.md) | Always when guiding a person through the web app. Defines every page and term in basic English, the correct click order, updates, Playground, and local-vs-hosted behavior. |
+| [`references/development-and-production.md`](references/development-and-production.md) | Always. Explains why development and production are separate, what does not copy, and the explicit promotion checklist. |
 | [`references/control-plane-and-models.md`](references/control-plane-and-models.md) | Always. Explains provider connections, model IDs, drafts, immutable revisions, environments and browser credentials. |
 | [`references/tools-and-generative-ui.md`](references/tools-and-generative-ui.md) | The agent needs research, SEO, app/database actions, charts, choices, cards or dynamic report UI. |
 | [`references/troubleshooting-and-proof.md`](references/troubleshooting-and-proof.md) | Setup is confusing, the UI waits forever, an agent/tool is missing, a revision changed, or before claiming completion. |
@@ -49,6 +87,8 @@ Write down these six values first:
 6. existing agent ID and published revision, if any.
 
 Do not infer production from a deployed URL or development from localhost. Development and production are separate control planes. Repeat the workspace and environment in every status update involving a remote write.
+
+If the user is working in the dashboard, point out the **workspace** and **environment** selectors in the top bar before naming any sidebar page. Read `references/development-and-production.md` and explain the difference before asking them to configure the same product twice.
 
 Inspect before editing:
 
