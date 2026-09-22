@@ -64,6 +64,13 @@ Use `docs/` for cross-cutting operating models, lifecycle maps, templates, accep
 
 Security and deployment skills must fail closed: identify the environment, authority, affected data, approval needed, and verification method before mutation. They must never convert an unverified local pass into a claim that production is secure or live.
 
+### 4a. Build with CodeSpring Agents
+
+**Outcome:** a published CodeSpring agent is connected to its application with the intended model route, capabilities and secure browser boundary, then proven by replay and UI smoke evidence.
+
+- `cs-agent-setup` — environment and authentication, provider/model routing, immutable agent revision, skills/tools/MCP, scoped server and browser credentials, SDK/React integration, progressive generative UI, troubleshooting and an `AGENT_SETUP.md` verification receipt. The skill keeps the implementation detail exact but translates the dashboard and each human-only step into fifth-grade English for builders who may not know GitHub, repositories, terminals, CLIs, APIs or MCP.
+- Future agent-family skills should own genuinely separate outcomes such as a production channel deployment or recurring agent operations. Do not split individual MCPs, model providers or dashboard actions into top-level skills.
+
 ### 5. Offer, website, and acquisition
 
 **Outcome:** the finished app has a clear offer, an indexable conversion path, a measurable content engine, and an ordered marketing backlog.

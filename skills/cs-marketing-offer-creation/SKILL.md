@@ -1,179 +1,328 @@
 ---
 name: cs-marketing-offer-creation
 description: >
-  Design a paid-ads offer from evidence rather than opinion. Tears down what
-  competitors are already running in the Meta Ad Library, ranks offers by
-  survival and creative duplication, scrapes the landing pages behind the
-  winning ads, then writes the offer, its price ladder, its order bumps and its
-  back end into a durable teardown document. Use when designing or rewriting a
-  front-end offer, a webinar or event registration page, an order bump, or an
-  upsell. Triggers, "research offers", "what offers are working right now",
-  "tear down this funnel", "scrape the ad library", "design a front-end offer",
-  "what should our webinar promise be", "competitor ad research", "why is our
-  CPC so high".
+  Design or sharpen a commercial offer from customer evidence, the actual
+  product boundary and, when useful, competitor ad research. Use for front-end
+  offers, paid discovery products, webinars, price ladders, order bumps,
+  upsells, high-ticket pathways, positioning and offer-message decisions.
 ---
 
-# Offer creation from ad-library evidence
+# Offer creation from buyer evidence
 
-## Overview
+## Non-negotiable clarity gate
 
-Produce an offer backed by what the market is already paying to run. The output
-is a teardown document plus a specified offer, not a hunch. Consumes market
-context from `cs-marketing-research`; hands its offer to `cs-marketing-website`
-for the page build.
+Before keeping any sentence, ask:
 
-**Approval boundaries.** This skill reads public data and writes documents. It
-must not launch ads, spend budget, publish pages, or contact competitors. It
-must not copy competitor copy into production — quote it as evidence only.
-Apify runs cost credits, so ask before using the paid route when a free one
-exists.
+> Does this sentence ADD anything/answer any confusion?
 
-## 1. Frame the decision
+If it does neither, remove it. Do not keep a line because it sounds polished,
+creates rhythm, or gestures at a benefit already stated elsewhere. Every line
+must introduce useful information, make the offer more concrete, resolve a
+likely objection, explain a necessary dependency, or move the buyer to the
+next action.
 
-State before researching: the product being sold, the avatar, the traffic
-source, the price the back end needs to support, and the CPC or cost-per-lead
-target. An offer designed without a back-end price is a guess.
+Reject copy that creates more questions than it answers. For example, “Know
+where Ai fits before you build” is not clear enough: fits where, and build what?
+“Your team stays in control” is also incomplete unless the offer says what the
+team controls. Prefer a concrete deliverable such as: “Get a technical plan,
+with step-by-step instructions on how to build a custom Ai agent.” A useful
+supporting line can then explain why it matters: “You can’t build a dependable
+Ai agent without a proper technical plan. Get one built correctly, so your
+agent doesn’t keep breaking, for just $49.”
 
-If any of these are missing, ask. Do not research generically.
+On the final edit, interrogate every sentence:
 
-## 2. Pull the ads
+- What new information does this add?
+- Which specific confusion or objection does it answer?
+- Are the subject, action, object and result concrete on first reading?
+- Does it introduce an undefined phrase that makes the buyer ask “what does
+  that actually mean?”
 
-### Free route — the browser. Default to this.
+If there is no precise answer, delete or rewrite the sentence. This rule is
+non-negotiable and overrides stylistic preferences, clever phrasing, rhythm and
+the desire to make the offer sound more “marketing.”
 
-Drive `facebook.com/ads/library` directly. No credits, no API.
+## Outcome and scope
 
-```text
-active_status=active|inactive|all
-ad_type=all
-country=US|GB|ALL
-media_type=all
-q=<terms>
-search_type=keyword_exact_phrase | keyword_unordered
-```
+Produce a specific offer that the intended buyer can recognise, understand and
+buy, while preserving what the front end really delivers and what is sold later.
+The result is an offer decision document plus message territories that can be
+handed to ads and pages.
 
-- `keyword_exact_phrase` — the literal phrase. Use for brand names, signature hooks, and measuring an angle's size.
-- `keyword_unordered` — **AND across all terms.** The workhorse for finding offers. Four to five terms; six or more returns zero.
+Start with the business, customer and product evidence already available. Use
+competitor research to answer a real uncertainty, not as a mandatory opening
+ritual. A customer email explaining what work keeps returning to them can be
+more useful for the promise than a large sample of generic ads.
 
-Parse by splitting `document.body.innerText` on `Library ID: `. Each chunk gives
-the start date, the advertiser (the line before `Sponsored`), the
-`N ads use this creative` count, `0:00 / 0:00` when the creative is video, and
-the display domain.
+**Approval boundaries.** Reading supplied material, public research and writing
+offer documents are within scope. Do not launch ads, spend budget, publish
+pages, contact customers or competitors, or invent claims. Paid research tools
+need the user's authorisation when they consume credits. Continue with the
+evidence already available instead of creating an approval gate for ordinary
+offer work.
 
-Destination URLs are not in the text. Pull them from the DOM:
+## Establish the commercial chain
 
-```js
-[...document.querySelectorAll('a[href*="l.php"], a[href*="l.facebook.com"]')]
-  .map(a => decodeURIComponent(new URL(a.href).searchParams.get('u') || ''))
-```
+Recover the following from the request, earlier decisions, customer material
+and current product before writing copy. Label important statements as
+`EVIDENCE`, `USER DIRECTION` or `HYPOTHESIS`. Ask only when the missing answer
+would materially change the buyer, deliverable, price or funnel; otherwise make
+the narrowest useful assumption and mark it.
 
-Pagination is a **"See more"** button, not infinite scroll. Click it in a loop.
+1. **Buyer qualification:** what must already be true about the business,
+   authority, staff, customers, tools, prior attempts and ability to pay? State
+   disqualifiers as clearly as qualifiers.
+2. **Audience state:** what have they tried, what repeatedly happens, what do
+   they think the problem is, and what do they understand today?
+3. **Purchase motive:** what immediate pain are they trying to remove or what
+   business gain are they trying to create? Separate motives that imply
+   different incidents, proof or promises.
+4. **Front-end offer:** what do they buy now, for what price, and what tangible
+   output or decision do they leave with? Classify it as discovery/diagnosis,
+   education, software access, implementation or another exact format.
+5. **Mechanism:** how does the front end create that result, stated in terms the
+   buyer can understand? Seller-side software, capability knowledge or process
+   may power the mechanism without becoming the cold-traffic promise.
+6. **Downstream offer:** what is sold later, at what indicative price or level
+   of commitment, and what fit signal should the front end reveal?
+7. **Traffic and destination:** cold or warm, channel, awareness level, CTA and
+   where the click lands.
+8. **Economics and proof:** price ladder, acquisition target if known, order
+   bumps/upsells only when commercially justified, and usable proof or claims.
 
-### Paid route — Apify MCP. Ask first; it spends credits.
+Do not design the front end as a disguised description of the high-ticket sale.
+The downstream product informs who the front end should attract, while the
+front-end promise must stop at what the buyer actually receives now.
 
-Server `apify` at `https://mcp.apify.com/`, header `Authorization: Bearer <APIFY_TOKEN>`.
+## Build the ICP as a buying situation
 
-```text
-search-actors        find a Facebook Ad Library actor
-fetch-actor-details  read its input schema BEFORE calling
-call-actor           run it (waitSecs 0-45; 0 returns a runId immediately)
-```
+An ICP is useful when it predicts who recognises the ad, values the offer and
+can progress into the next sale. Capture:
 
-Results return storage IDs, not rows. Build the URL from the ID and read it as
-an MCP resource, paging with `limit`/`offset` because reads inline only to
-about 256 KB:
+- Required business facts, such as existing staff, customers, a live workflow
+  or an existing product.
+- Current behaviour, such as experimenting with tools, assembling automations,
+  or building a dashboard, CRM or prototype.
+- The repeated incident that creates urgency.
+- Their ambition in their own words.
+- What they know, what they are unaware of, and which technical language they
+  would not use.
+- Buying authority, budget context and disqualifiers.
 
-```text
-http://api.apify.internal:3333/v2/datasets/{datasetId}/items?clean=true&format=json&limit=100
-```
+Do not broaden an offer for established operators into “anyone interested in
+AI.” Do not use industry labels unless the offer or evidence requires them.
 
-Use this route for volume, scheduled monitoring, or when the browser is
-unavailable.
+### AI-worker discovery pattern
 
-## 3. Read the numbers
+For a discovery offer aimed at established nontechnical business owners, the
+qualification may require staff and customers already in place. They are
+comfortable trying AI tools and may have built or commissioned a CRM,
+dashboard, command centre or prototype, but they do not understand the memory,
+connections, permissions, infrastructure and guardrails required for reliable
+AI workers.
 
-Five rules decide everything downstream.
+Two motives should normally become separate offer-message families:
 
-1. **A duplicated creative is a winner.** `N ads use this creative` means one creative across N ad sets. Nobody duplicates twenty-four times to test; they duplicate because it already won. This is the only free profitability signal that exists.
-2. **Many creatives with no duplication means still testing.** Judge nothing until it survives.
-3. **Mass inactivity kills an angle.** If an angle sits entirely in `active_status=inactive`, it was tried at volume and abandoned. Do not re-run it as though it were undiscovered.
-4. **Age beats volume.** One ad alive 150 days outranks ninety ads alive three weeks. Spend fakes volume; it cannot fake survival.
-5. **Durations are floors.** Meta resets the start date on material edits.
+| Motive | What they recognise | What they want |
+|---|---|---|
+| Internal operations | Systems may work, yet checking, paperwork, coordination and exceptions still return to the owner | AI workers completing useful recurring work inside existing software or across cloud tools, with the right approvals |
+| Customer software | They are building or already have software for customers but cannot turn agents into a dependable part of the user experience | Useful agents inside the product that help customers complete real work |
 
-Also compute `active ÷ (active + inactive)` per keyword for the survival rate of
-the space, and cross-check each operator's brand keyword against their personal
-name — the oldest ad is often a different, older offer.
+A low-ticket discovery product can sell the answer to: “Given my business,
+what I am trying to achieve and what I have already built, how do I get AI doing
+useful work without creating another thing I have to manage?” Its mechanism may
+be a conversational discovery engine informed by implementation capabilities.
+Cold traffic does not know the vendor, so do not sell “discover what is possible
+inside our platform.” Sell the business decision and useful clarity. Keep the
+platform and technical capability map as internal support for the mechanism.
 
-## 4. Scrape the pages behind the winners
+If the front end is discovery, it can identify suitable work, required
+connections, information/memory, human approvals, priorities and a credible
+implementation path. It cannot promise that agents are deployed unless
+implementation is included. Later implementation or a high-ticket agent build
+is a separate downstream sale.
 
-Fetch the destination URLs from step 2. Funnel pages are usually JS-rendered; if
-a fetch returns only the footer or a 403, load it in a browser instead.
+Treat sharper interpretations carefully. Working systems plus continuing owner
+burden are evidence that the systems have not removed the work; they do not by
+themselves prove AI created more work. A wish for agents inside customer
+software does not prove the motive is more usage or revenue. Keep those as
+hypotheses until customer language or behaviour supports them.
 
-Capture verbatim, never paraphrased: headline, sub-headline, every bullet, form
-fields, CTA button text, countdown or date language, price, guarantee, and proof
-claims. Paraphrase destroys the evidence.
+## Turn evidence into the offer
 
-**Evergreen tell:** a CTA reading "See The Next Workshop Time" or "STARTING 8PM
-TONIGHT" with a rolling countdown, rather than a fixed calendar date.
+Create a compact evidence ledger before choosing a promise:
 
-**Also record the mechanics, not just the copy** — social-proof counters,
-incentivised phone capture, attendance bribes, and how many separate
-application pages sit behind one registration.
+| Observation or phrase | Source | Status | Offer implication |
+|---|---|---|---|
+| Exact customer wording or observed behaviour | customer source/date | EVIDENCE | incident, objection, ambition or proof |
+| Explicit strategic choice | user | USER DIRECTION | constraint or decision |
+| Plausible interpretation | analysis | HYPOTHESIS | angle to test, not a claim |
 
-## 5. Write the teardown
+Then specify:
 
-One entry per offer. Name the offer so it can be argued about.
+- **Offer name:** useful internally even when it is not customer-facing.
+- **One buyer:** the qualified decision-maker for this path.
+- **One primary motive:** pain relief or gain, with the recognisable incident.
+- **Promise:** the result of this purchase in plain buyer language.
+- **Mechanism:** why this next action creates progress.
+- **Deliverable:** exactly what they receive, its depth and limits.
+- **Price and CTA:** including any genuine guarantee or urgency.
+- **Proof:** only supported claims, with attribution where needed.
+- **Downstream bridge:** why a suitable buyer would reasonably want the later
+  product, without implying it is included now.
 
-| Field | Why it matters |
-|---|---|
-| Front-end format | webinar, evergreen, challenge, VSL, sales page |
-| Promise, verbatim | the words that actually buy the click |
-| Product sold | SaaS, agent, marketplace, course, community, coaching, DFY |
-| Price ladder | front end, order bumps, OTO, high-ticket |
-| Operators running it | one company, or a licensee/affiliate network |
-| Ads and duplication | total ads, and unique creatives |
-| Days live | from the oldest still-active ad |
-| Format mix | video versus static |
+## Use direct bundle-offer mode when the stack is the hook
 
-## 6. Specify the offer
+When the user supplies offer copy and explicitly says it is the version they
+were trying to reach, treat its structure and commercial emphasis as
+`USER DIRECTION`. Preserve it as the canonical baseline. Do not force it back
+through a longer founder story, a mandatory historical revenue opening or an
+abstract result-only headline unless the user asks for another mode.
 
-Test the draft against what the teardown shows.
+A low-ticket bundle can be strongest when the bargain itself is immediately
+clear. Use this shape when the actual product stack and price do the selling:
 
-- **Does the promise end at money?** Offers that stop at a capability die young. Offers that close the loop to revenue survive.
-- **Is the number in the first line?** Winning pages lead with a specific figure and make it the reader's future, not the founder's past.
-- **Is the front end in the proven band?** Free registration, or roughly $7–$97. Anything above needs a free front door in front of it.
-- **Is there an order bump?** A single front-end price rarely liquidates ad spend. Bumps should sell the half the core product does not deliver.
-- **Is the back end an outcome rather than more software?** Winning back ends sell the result; the software is the delivery mechanism.
-- **Is there one door per avatar?** Separate registration pages feeding one event beat one page trying to address everyone.
-- **Is the proof aggregate?** Customer averages travel further, and survive scrutiny better, than founder claims.
+1. A plain audience callout when it helps qualification.
+2. The concrete package value and purchase price in the opening.
+3. One short recognition moment in the buyer's language.
+4. “Here is what you get,” followed by the real deliverables. For each, name
+   the product, its supported value and why it is useful.
+5. Total value, current price and one direct CTA.
 
-## 7. Artifacts
+This is not the same as turning the copy into a repetitive capability list.
+Three separately fulfilled products are a genuine offer stack. Repeating the
+same agent functions under several headings is padding. Keep the recognition
+section short and let each deliverable earn its place.
 
-- A dated teardown document in the project's research folder.
-- A specified offer: promise, avatar, format, price ladder, bumps, back end.
-- A concise ingest into Atlas so later work inherits the decision.
+Do not lead only with an unfamiliar product name. A cold buyer may not know
+what a “Discovery Engine” is. Pair the stack with the wanted change, such as
+getting useful work off the owner, creating capacity to scale or working out
+where AI can save money and what to build first. The tool is the mechanism.
 
-## 8. Verification
+For the current AI business-discovery bundle, the approved campaign example is:
 
-Do not report completion without: the query strings used, ad and duplication
-counts per operator, at least one verbatim landing page per shortlisted offer,
-and an explicit statement of what was not covered.
+- AI Business Discovery Engine Agent: stated value $1,122. It is a
+  tool-equipped conversational agent with web research and knowledge of agent
+  infrastructure, not merely a static plan or generic chatbot.
+- Agentic Business Case Study: stated value $197. The reported move from
+  $50/month to over $2,000/month is seller-side case-study evidence, not a
+  buyer earnings guarantee.
+- Launch-Ready One-to-One Call: stated value $275.
+- Stated total value: $1,594. Purchase price: $27.
 
-## 9. Status language
+Use these exact figures only for this approved offer or when the user supplies
+them again. A “next 24 hours” or “today only” line is a dated campaign variant;
+never turn it into evergreen or resetting scarcity.
 
-Use `draft`, `dogfooding`, `proven`, `deprecated` exactly as defined in
-`docs/skill-governance-sop.md`. An offer that has not run traffic is `draft`,
-however good the research is.
+Keep outcome, obstacle and mechanism separate while reasoning, then compress
+them into a direct offer the buyer can repeat. A useful starting shape is:
 
-## Pitfalls
+> Use this [price] [deliverable] to [specific result] without [real obstacle]
 
-- **Benchmarking against a dead funnel.** Confirm which of your own campaigns are actually live before comparing. A paused offer's creative is not your current positioning.
-- **Reading raw ad counts as spend.** Ad count without the duplication breakdown misreads eight winning creatives as eighty tests.
-- **Treating an empty lane as opportunity.** Usually it means unproven demand, not undiscovered demand. Say which you believe and why.
-- **Copying competitor copy.** Quote it as evidence; never ship it.
-- **Claiming conversion insight.** Longevity and duplication are profitability proxies. Nothing in the Ad Library measures conversion, and no spend data exists for US-targeted ads.
-- **Sampling silently.** Every sweep is impressions-sorted and sampled from the top. State what was left uncovered.
+This is a starting shape, not a compulsory template. Prefer the shortest version
+that still names what is bought and why it matters. The mechanism can live in a
+supporting sentence on a page; it does not have to become a technical headline.
+For image-ad handoff, supply the headline, offer/price and CTA plus a visual
+mechanism note. Do not solve a weak image by printing the full explanation on it.
+
+Test every draft:
+
+- Can a qualified buyer recognise their present situation in the first line?
+- Does the promise answer a decision they already want made or a result they
+  already want created?
+- Would a cold prospect understand it without knowing the vendor, product name
+  or technical architecture?
+- Does the mechanism explain progress without technical theatre?
+- Does the deliverable fulfil the promise at the stated price?
+- Does each major motive have its own path rather than a vague all-in-one line?
+- Are outcome, revenue, usage, time-saving and workload claims supported?
+- Is implementation clearly separated from discovery or education?
+- Can the buyer repeat what they get, why it matters and what they pay without
+  hearing an additional explanation?
+
+Money is one possible endpoint, not a universal requirement. Time back, owner
+relief, reduced management burden, faster decisions, customer capability and
+risk reduction can be stronger when that is what the buyer is actually seeking.
+Do not force a number, order bump or revenue claim because another funnel used
+one.
+
+Match every guarantee to the purchase it covers. A verified money-back guarantee
+for a low-ticket discovery product covers that purchase only. An outcome-backed
+implementation guarantee, such as a revenue result or money back, is a separate
+commercial offer and obligation. Treat a floated outcome guarantee as a
+`HYPOTHESIS` until its result, scope, attribution method, time window, exclusions
+and refund terms are explicitly approved and supportable. Never append it to the
+discovery offer by association.
+
+## Result-led refund guarantees
+
+When the user asks for a result-backed guarantee, name the useful result of this
+purchase before the refund. Do not leave risk reversal as only a generic
+“30-day money-back guarantee” badge. Use this reusable structure:
+
+> Get [specific result/deliverable within this purchase], or get [purchase price] back
+
+State the refund-request window clearly in the primary text or offer terms. Keep
+any existing broader refund policy intact: the result-led wording must not add
+completion requirements, implementation milestones or other new hurdles to an
+existing refund right. Reuse terms already authorised in the session; do not
+ask again merely because the copy is more specific.
+
+For the $27 AI Discovery Engine, the user-directed version is:
+
+> Find where AI fits in your business and what to build first, or get your $27 back
+
+Supporting terms: “If it doesn’t give you that clarity, request a refund within
+30 days of purchase.” This promises discovery clarity, not a deployed agent,
+revenue growth or a completed build. A separate implementation-result guarantee
+needs its own supported scope and terms. For images, shorten the guarantee while
+preserving the same result and refund meaning; carry the full window in the
+accompanying copy and destination. Keep actual product, checkout and ad terms
+consistent before publication.
+
+## Research only the uncertainty
+
+Use public research when it can change a decision: whether a format or promise
+has survived, how competitors package the front end, where prices cluster, or
+which mechanisms are crowded. Record the search scope and limitations.
+
+When the Meta Ad Library is relevant, read
+[ad-library-research.md](references/ad-library-research.md). Longevity and
+creative duplication are directional signals, not conversion or profitability
+data. Quote competitor copy as evidence; never ship it as the user's copy.
+
+## Artifacts
+
+Save a dated offer decision document containing:
+
+1. The commercial chain and ICP qualification.
+2. The evidence ledger, including unresolved hypotheses.
+3. The selected front-end offer and exact boundaries.
+4. The downstream offer and qualification bridge.
+5. Distinct message territories for each supported motive.
+6. Research scope and limitations when external research was used.
+
+Store the reusable strategic conclusions in the authorised business-memory
+system when one is configured. Keep private emails and customer-identifying
+records in the appropriate private source store; do not copy them into a
+reusable skill repository.
+
+## Verification and status
+
+Before reporting completion, confirm the named buyer meets the qualification,
+the front-end promise matches the deliverable, the downstream product is not
+implied as included, each material claim has a source/status, and the message
+works for the stated traffic awareness. Report what remains a hypothesis and
+what evidence was not covered.
+
+Use `DRAFT` for an offer that has not run, `DOGFOODING` while it is being used
+on the owner's campaign, `PROVEN` only after repeat evidence, `AWAITING APPROVAL`
+for a real pending approval and `BLOCKED` for a missing required input. Research
+quality alone does not make an offer proven.
 
 ## Handoff
 
-Feeds `cs-marketing-website` for the page build, and the offer's back-end
-definition into the relevant build or release planning.
+Send the commercial chain, selected promise, evidence ledger, exact deliverable
+and message territories to `cs-marketing-image-ads` and
+`cs-marketing-website`. Keep full implementation scope with the relevant build
+or sales-delivery workflow.

@@ -4,6 +4,8 @@
 
 If you are unsure, run **`cs-build-getting-started`** — it detects where the project actually is and names the single next step.
 
+If the task is specifically to connect or repair the separate **CodeSpring Agents** product, run **`cs-agent-setup`**. It owns the full SDK/control-plane path from environment and model routing through tools, browser auth and a replay-backed working-session proof.
+
 ---
 
 ## Journey A — they have an idea
@@ -77,6 +79,7 @@ The audit alone is a sellable deliverable — it is a plain-English report on wh
 | **`cs-build-handoff`** | The plan is done and a client is about to receive it. |
 | **`cs-build-feature`** | There are tasks and it's time to write code. |
 | **`cs-build-resync-codebase`** | Code has been built and the map has drifted from it. |
+| **`cs-agent-setup`** | A CodeSpring agent must be created, connected to an app, given real capabilities, repaired, or proven end to end. |
 | **`codespring`** | Never directly — it's the shared knowledge the others read. |
 
 ---
