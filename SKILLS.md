@@ -44,8 +44,14 @@ Anything that must give the same answer every run is a script in `codespring/scr
 
 ## Skills
 
+New marketing capability: `cs-marketing-liquidation-offer-creation` owns the
+distinct mechanism-to-creative offer pack for low-ticket acquisition offers.
+It reuses broader offer strategy and image-ad execution rather than replacing
+them. Its session-derived guidance is draft pending a fresh end-to-end rerun.
+
 | Skill | Family | Status | Version | Purpose |
 |-------|--------|--------|---------|---------|
+| `cs-marketing-liquidation-offer-creation` | marketing | draft | 0.1 | Product truth → bookstore title research → buyer-understandable mechanism → tangible digital bundle → sparse ad/landing-page brief. Includes the App Idea Test Drive discovery and founder-led $27 price-anchor case. Hands off to offer economics, image ads and website; no claim of self-liquidating performance. |
 | `codespring` | core | needs-review | 1.1 | How CodeSpring works + full CLI. Holds the canonical references and the deterministic scripts. |
 | `cs-build-getting-started` | build | draft | 0.4 | Connect, report state from the scripts, route on the five questions (import vs audit vs plan-from-scratch). |
 | `cs-build-plan-app` | build | draft | 0.7 | **No code yet.** Idea or call recording → **what tool are they set on building in (asked first — it can invalidate the platform)**, job, walked journey, **every kind of user + the owner's admin surface**, platform call, inherited stack, the one hard part + prior art (licence-checked), **the systems checks (stale reference data, shared logic, whose database, freshness in the UI)**, v1 cut → gate → map + notes, then hands to `cs-build-ui-mockup`. The other entry door alongside import/audit. Owns the new-project-directory trap. |

@@ -1,0 +1,4 @@
+interface:
+  display_name: "CS Marketing Liquidation Offer Creation"
+  short_description: "Name and package a low-ticket acquisition offer"
+  default_prompt: "Use $cs-marketing-liquidation-offer-creation to turn my product into a clear low-ticket offer, named mechanism and simple ad creative pack."

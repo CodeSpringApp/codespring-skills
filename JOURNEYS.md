@@ -67,6 +67,10 @@ The audit alone is a sellable deliverable — it is a plain-English report on wh
 
 ## The whole pack, one line each
 
+For a low-ticket front-end offer needing a name, mechanism and tangible creative
+pack, use **`cs-marketing-liquidation-offer-creation`**. It connects bookstore
+title research to a truthful offer, mockups and ad briefs; it does not publish ads.
+
 | Skill | Run it when |
 |---|---|
 | **`cs-build-getting-started`** | You don't know where you are. Connects, reports state, names one next step. |
