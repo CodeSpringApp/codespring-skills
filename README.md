@@ -12,6 +12,18 @@ npx skills add CodeSpringApp/codespring-skills
 
 The installer will ask which agent to install for.
 
+### Automated Marketing Kit
+
+The complete [Automated Marketing Kit](automated-marketing-kit/START-HERE.md) lives in one folder: six portable skills, campaign templates, a fictional worked example, community directory, browser comment-review page, offline helpers and individual Claude upload ZIPs.
+
+Install its self-contained starting skill:
+
+```bash
+npx skills add https://github.com/CodeSpringApp/codespring-skills/tree/main/automated-marketing-kit --skill automated-marketing-toolkit
+```
+
+Omit `--skill automated-marketing-toolkit` to select specialist skills too. This is a separate bundle: the repository-root command above installs the CodeSpring skills. The marketing kit can market any SaaS and does not require the CodeSpring CLI. Browser control depends on tools available in your agent; installation does not provide logins or posting permission. See its [start guide](automated-marketing-kit/START-HERE.md).
+
 ### Prerequisites
 
 - [CodeSpring CLI](https://www.npmjs.com/package/@codespring-app/cli) installed and authenticated:
@@ -63,6 +75,7 @@ It carries the canonical `references/` (commands, task-workflow, analyze-codebas
 **Marketing and SEO family** — demand, offer, website:
 
 - **`cs-marketing-research`** — researches demand, competitors, alternatives, and positioning before committing marketing or product work.
+- **`cs-marketing-liquidation-offer-creation`** — drafts a low-ticket offer mechanism, tangible bundle and creative brief; currently draft, with no claim of self-liquidating performance.
 - **`cs-marketing-offer-creation`** — designs a paid-ads offer from evidence: Meta Ad Library teardown, the landing pages behind the winning ads, then the offer, price ladder, order bumps and back end.
 - **`cs-marketing-website`** — sets up and organises the page inventory, proof map, conversion paths, and founder-facing NOW/NEXT/LATER/BLOCKED website workboard.
 - **`cs-seo-website`** — operates CodeSpring marketing-site technical SEO, the Search Console-to-content loop, Vibe Code Library publishing gates and vetted product listings.
@@ -94,4 +107,4 @@ After installing, your agent uses the skills automatically when relevant. You ca
 
 ## License
 
-Apache-2.0
+The CodeSpring skill pack is Apache-2.0. The separately bundled `automated-marketing-kit/` is governed by its own [purchaser use license](automated-marketing-kit/LICENSE.txt), rather than the repository's Apache license.

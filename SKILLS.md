@@ -2,7 +2,7 @@
 
 **Looking for which skill to run? Read [`JOURNEYS.md`](JOURNEYS.md)** — the two journeys (idea → app, codebase → fixed app) and a one-line-each table. This file is the internal status tracker.
 
-Working tracker for the CodeSpring skill pack. `npx skills add CodeSpringApp/codespring-skills` installs **every** skill folder below in one go.
+Working tracker for the CodeSpring skill pack. `npx skills add CodeSpringApp/codespring-skills` discovers the flat `skills/` pack. The separately bundled Automated Marketing Kit has its own install command below.
 
 ## Architecture
 
@@ -114,6 +114,25 @@ them. Its session-derived guidance is draft pending a fresh end-to-end rerun.
 | `scripts/check-map.mjs` | `codespring` | The machine-checkable half of map quality and post-write verification: core-feature count, duplicate titles, flattened sub-features, missing notes, duplicate PRDs, unlinked tasks. Exit 1 = failure, 2 = warnings. |
 | `scripts/parse.mjs` | `codespring` | Shape-tolerant readers for the CLI's JSON (shared by the two above). |
 | `scripts/check-repo.sh` | `cs-build-audit-codebase` | Git/delivery reality: the commit the findings apply to, how far behind the remote, what's in flight on other branches, dirty tree, whether any check gates deploy, and per-path history to tell "unreferenced" from "unfinished". |
+
+## Automated Marketing Kit — separate bundle
+
+Owner: CodeSpring. Family: marketing. Location: [`automated-marketing-kit/`](automated-marketing-kit/START-HERE.md). This imports the existing six-skill purchaser edition, retaining its established names and invocation compatibility. It does not rename or move the flat CodeSpring installation surface. The normal root installer does not discover this nested bundle; install it explicitly:
+
+```sh
+npx skills add https://github.com/CodeSpringApp/codespring-skills/tree/main/automated-marketing-kit --skill automated-marketing-toolkit
+```
+
+| Skill | Maturity | Outcome and handoff |
+|-------|----------|---------------------|
+| `automated-marketing-toolkit` | dogfooding | Product truth → audience/offer → communities → researched, editable reply queue → owner review. |
+| `instant-ai-researcher` | draft | Cited product, alternative and buyer-language brief → positioning. |
+| `ai-positioning-expert` | draft | Audience, supported difference and claim ledger → community discovery. |
+| `automated-marketer` | dogfooding | Read conversations and existing comments → specific, disclosed replies and review queue → owner review or scoped publication. |
+| `reddit-community-finder` | dogfooding | Buyer-task evidence and current rules → launch shortlist and conversation searches. |
+| `humanizer` | dogfooding | Natural founder copy preserving facts and affiliation → owner review. |
+
+Integrated research, drafting, browser review and native draft preparation have been exercised on CodeSpring. Independent specialist reruns remain draft where listed. No agent publication, acquisition result, background monitor, screen recorder or moving-cursor guarantee is implied. See [validation evidence](docs/automated-marketing-kit-validation.md). All six standalone uploads and the kit integrity manifest rebuild with `python3 automated-marketing-kit/scripts/build_uploads.py`.
 
 ## Skill governance
 
