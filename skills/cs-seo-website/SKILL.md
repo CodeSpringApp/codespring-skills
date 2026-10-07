@@ -1,9 +1,9 @@
 ---
 name: cs-seo-website
 description: "Use when growing CodeSpring site SEO, content, or listings."
-version: 0.5.0
-author: CodeSpring
 metadata:
+  version: "0.5.0"
+  author: CodeSpring
   tags: [codespring, seo, marketing-site, search-console, content, link-building]
 ---
 

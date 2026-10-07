@@ -1,0 +1,14 @@
+# Use the user's connected browser session
+
+Follow the user's named browser/profile first. Otherwise, inspect the browser connections actually available and prefer the user's connected Chrome profile, or another existing user browser, over an isolated in-app, remote or temporary agent browser. Do not assume those isolated browsers share the user's website logins.
+
+Use the integration's documented selection and tab APIs. Reuse a relevant task tab or open a task tab in that same profile; preserve unrelated tabs and unsaved work. Check the visible site login state. Before any authorized publication, verify that the selected account is the intended one. Record browser/profile, login status and access limitations in the campaign handoff; credentials and cookies never belong there. Keep this selection for later steps instead of silently returning to an isolated browser.
+
+If the user's browser is not connected, explain the missing capability. A skill works in Codex or Claude Code only through browser tools that environment actually supplies; it cannot open or control the user's signed-in Chrome merely by being installed. Offer a supported browser connection or manual handoff, and continue public research/drafting with available tools where possible. If using an isolated browser for public research, label it as a separate session and do not require a fresh login just to draft.
+
+For a genuinely missing login needed for requested posting, use the account setup guide and let the user complete credentials, two-factor checks and CAPTCHA in the selected browser. Never copy cookies/passwords or scrape a local profile to recreate access. Do not switch browsers or accounts to evade a denial, ban, rate limit or verification requirement. Selecting the user's existing profile at their request does not change posting authorization or community rules.
+
+## One-window demonstrations
+When the user requests a recording on one monitor, identify the intended browser window from the available window/tab inventory and keep task tabs there. Do not assume choosing a browser profile also chooses its foreground window. If tools expose only tab/profile control, state that window placement is not controllable and let the user arrange the window; do not open a second window and claim the constraint is met.
+
+Test a meaningful visible click and scroll before a take. Native mouse controls and background DOM actions can display differently; do not promise a moving desktop cursor or screen recording without supported tools and verified output. Use actual research interactions, preserve unrelated windows and avoid fabricated engagement. If the user asks to replay typing, clear only the identified unposted draft, retype it, verify normal rendered paragraphs and leave submission to the owner. Never delete a published comment as part of a typing replay.
