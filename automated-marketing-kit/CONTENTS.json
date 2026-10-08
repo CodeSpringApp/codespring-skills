@@ -1,0 +1,281 @@
+{
+  "edition": "2026-10-07",
+  "pack": "kit",
+  "files": [
+    {
+      "path": "DELIVERY-MAP.md",
+      "bytes": 1049,
+      "sha256": "b7a4caa219c6ae5165961a83cecffd40db3b31766e59e7b26bd2fbc789a97236"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 636,
+      "sha256": "b669b0f5f08404b9f1925464896a1f33e8b03c4eb732ddb38398ab3bfdda9dde"
+    },
+    {
+      "path": "START-HERE.md",
+      "bytes": 11566,
+      "sha256": "5a3026f6cc58ad8fb3b09fafd42c2aab494a5ff75300d09e353bf74935526903"
+    },
+    {
+      "path": "claude-upload/ai-positioning-expert.zip",
+      "bytes": 2964,
+      "sha256": "e3993c0f7f050afaf0fddf3862beef3e04b13f6b9041f5a1b072c232b204faac"
+    },
+    {
+      "path": "claude-upload/automated-marketer.zip",
+      "bytes": 22439,
+      "sha256": "5e0b95acca96c23e15a3b637574d0da0f6d343d014e1cb12db54a729d7db602d"
+    },
+    {
+      "path": "claude-upload/automated-marketing-toolkit.zip",
+      "bytes": 22873,
+      "sha256": "d73f2194170ed298b13ff843a1811429a0f6f9f9381d6676b1e482cf34f0f477"
+    },
+    {
+      "path": "claude-upload/humanizer.zip",
+      "bytes": 2673,
+      "sha256": "a80931efe434e0fcaff3e355437fa9efa9d22fcb60be1b18c71117a7189ac87a"
+    },
+    {
+      "path": "claude-upload/instant-ai-researcher.zip",
+      "bytes": 3507,
+      "sha256": "d4adb399692cc67906d7d1136c085e293b5f0481cd8d1340c5080e8376d3e0b2"
+    },
+    {
+      "path": "claude-upload/reddit-community-finder.zip",
+      "bytes": 8865,
+      "sha256": "d398f46af642c4c958e048835868cd9a01b4e6a43174b8bb9c2f385457f4b403"
+    },
+    {
+      "path": "examples/WORKED-EXAMPLE.md",
+      "bytes": 2780,
+      "sha256": "6d0586b78f8329da690d5745853638cbefc57a573c591d8686b5c65c594a0b46"
+    },
+    {
+      "path": "examples/leads-SAMPLE-ONLY.csv",
+      "bytes": 981,
+      "sha256": "5d7adadf502f219d44d4215ffa57214e48bd18c50b4d8a8e689afd258c697777"
+    },
+    {
+      "path": "reddit-account-setup.md",
+      "bytes": 1570,
+      "sha256": "96700eda3562da6205367857f0ceeaa7362445a8afb0c9033e6087c6cef93732"
+    },
+    {
+      "path": "scripts/build_uploads.py",
+      "bytes": 2383,
+      "sha256": "1ca262a5807e9be8a8b1e7855ef95fc18469d6ea2da81d7e30e1450d55ef8d50"
+    },
+    {
+      "path": "skills/ai-positioning-expert/SKILL.md",
+      "bytes": 2268,
+      "sha256": "015aa98e3b841a0e2a28df77cd360d6ce30e1a77b0ee2b6b91fa81ca2d92eb6f"
+    },
+    {
+      "path": "skills/ai-positioning-expert/assets/positioning-brief.md",
+      "bytes": 902,
+      "sha256": "8f047bda46f318a9af15a670ff7a67d474dedb6cb46978dd11ed803809cf3824"
+    },
+    {
+      "path": "skills/ai-positioning-expert/references/positioning-decisions.md",
+      "bytes": 1390,
+      "sha256": "70dc77e2d2b8f12c6261c3f0d64a96309470918667422e6370deb8f2dc45fcb4"
+    },
+    {
+      "path": "skills/automated-marketer/SKILL.md",
+      "bytes": 5678,
+      "sha256": "9193dcc26252b9a09d48792f790bbcc4b7ba61816027b096b49bd4e7f8fdb735"
+    },
+    {
+      "path": "skills/automated-marketer/assets/leads.csv",
+      "bytes": 253,
+      "sha256": "97745a74dc3563c673956ba38cd6a962746a6b575efe55eca11e39861cebf53b"
+    },
+    {
+      "path": "skills/automated-marketer/assets/reply-drafts.md",
+      "bytes": 857,
+      "sha256": "070f01b1d174f56e0732cc51e2af78f29c2fbd26d0db814f88936a670755c903"
+    },
+    {
+      "path": "skills/automated-marketer/assets/review-queue.html",
+      "bytes": 14354,
+      "sha256": "6f0ac946e292d67deea2b5e3210770929fb65494503c3ac1218f0d956f6f4922"
+    },
+    {
+      "path": "skills/automated-marketer/references/browser-session.md",
+      "bytes": 2860,
+      "sha256": "6920def98756797ae86fb83cff098cd418c8608525405fd0738c4d9ae204e30a"
+    },
+    {
+      "path": "skills/automated-marketer/references/lead-schema.md",
+      "bytes": 2932,
+      "sha256": "becaa162b2419031d74438e07d90a1922002d02610b114a8556f5a3d6a965bda"
+    },
+    {
+      "path": "skills/automated-marketer/references/reddit-account-setup.md",
+      "bytes": 1570,
+      "sha256": "96700eda3562da6205367857f0ceeaa7362445a8afb0c9033e6087c6cef93732"
+    },
+    {
+      "path": "skills/automated-marketer/references/reply-patterns.md",
+      "bytes": 2524,
+      "sha256": "46e1237d20539a133c4d649f519e33865d54e616b81c8ca99929ae71dfca6936"
+    },
+    {
+      "path": "skills/automated-marketer/references/review-queue.md",
+      "bytes": 3800,
+      "sha256": "b3fb04962fded2d17f5c26a318e48883f2ab5efb688e118fd3ad0c65f53a60b7"
+    },
+    {
+      "path": "skills/automated-marketer/references/workflow.md",
+      "bytes": 3970,
+      "sha256": "2afb6ff8bf6b443e46b540299bcf2f70c50e4806023acd067be0c7352e237c50"
+    },
+    {
+      "path": "skills/automated-marketer/scripts/build_review_queue.py",
+      "bytes": 1909,
+      "sha256": "ee6627e73963b31a1658dffb37fc5b8c25bbc2a7877a2065bb6685a07225cce0"
+    },
+    {
+      "path": "skills/automated-marketer/scripts/campaign_tools.py",
+      "bytes": 7394,
+      "sha256": "c8537208f7a601f00c88cb70e3e8974dc6d378d4f6c3bd6db9ec65b304f17dec"
+    },
+    {
+      "path": "skills/automated-marketing-toolkit/SKILL.md",
+      "bytes": 7780,
+      "sha256": "a99399eafe81e912e7cd7dbb30a1417eb746ead36d0d5aec2e7d96d0f720e119"
+    },
+    {
+      "path": "skills/automated-marketing-toolkit/assets/campaign-handoff.md",
+      "bytes": 1639,
+      "sha256": "15d3b138399fd17fb82a16f3633a53c464da8ddc56ec15a53c3f61b256146c18"
+    },
+    {
+      "path": "skills/automated-marketing-toolkit/assets/review-queue.html",
+      "bytes": 14354,
+      "sha256": "6f0ac946e292d67deea2b5e3210770929fb65494503c3ac1218f0d956f6f4922"
+    },
+    {
+      "path": "skills/automated-marketing-toolkit/references/browser-session.md",
+      "bytes": 2860,
+      "sha256": "6920def98756797ae86fb83cff098cd418c8608525405fd0738c4d9ae204e30a"
+    },
+    {
+      "path": "skills/automated-marketing-toolkit/references/conversation-launch.md",
+      "bytes": 4265,
+      "sha256": "9f554290726dd56c8a1c6386985f96ec83f89c808f278b03d253c915d9bd1869"
+    },
+    {
+      "path": "skills/automated-marketing-toolkit/references/product-and-offer.md",
+      "bytes": 2095,
+      "sha256": "ae351b3d34b8510422f95ed81e0b45d54240f70f23ea1287c64cf85e87c90ab5"
+    },
+    {
+      "path": "skills/automated-marketing-toolkit/references/reddit-account-setup.md",
+      "bytes": 1570,
+      "sha256": "96700eda3562da6205367857f0ceeaa7362445a8afb0c9033e6087c6cef93732"
+    },
+    {
+      "path": "skills/automated-marketing-toolkit/references/reply-and-publishing.md",
+      "bytes": 4466,
+      "sha256": "6a32edcc4def2defcaff702df063dd56b994c72d85c7459dacaaf71d2b961511"
+    },
+    {
+      "path": "skills/automated-marketing-toolkit/references/review-queue.md",
+      "bytes": 3800,
+      "sha256": "b3fb04962fded2d17f5c26a318e48883f2ab5efb688e118fd3ad0c65f53a60b7"
+    },
+    {
+      "path": "skills/automated-marketing-toolkit/references/top-10-starter-communities.md",
+      "bytes": 3340,
+      "sha256": "d2d7db1fa687fe0d53056be0fd336e4635d82a1520f2a262ac9d9cac7c79cdef"
+    },
+    {
+      "path": "skills/automated-marketing-toolkit/scripts/build_review_queue.py",
+      "bytes": 1909,
+      "sha256": "ee6627e73963b31a1658dffb37fc5b8c25bbc2a7877a2065bb6685a07225cce0"
+    },
+    {
+      "path": "skills/humanizer/SKILL.md",
+      "bytes": 2023,
+      "sha256": "dc5097f56ee9bfb6453a97cfbc863971ac52d590f7dd95cb747f365cda2158ad"
+    },
+    {
+      "path": "skills/humanizer/references/voice-and-prompts.md",
+      "bytes": 2602,
+      "sha256": "0afd62c6fb43c65c37caef0c26beed00bd5d0787c7537f50aa61ff07d4abbccb"
+    },
+    {
+      "path": "skills/instant-ai-researcher/SKILL.md",
+      "bytes": 2392,
+      "sha256": "9af4a697af521b9844a89b4f00a8f393eee1c0673b4b427d2afd3f0a68d3cdd6"
+    },
+    {
+      "path": "skills/instant-ai-researcher/assets/research-brief.md",
+      "bytes": 948,
+      "sha256": "bd913b208277eb4a3d2898a2db024da8a90503930710c3c0eeca6cf5f5abe7df"
+    },
+    {
+      "path": "skills/instant-ai-researcher/references/research-method.md",
+      "bytes": 2365,
+      "sha256": "a5b7c6a7c5bdc0f4098665f56e754cc305ab405dbf734d0e8e200dda6ad40d78"
+    },
+    {
+      "path": "skills/reddit-community-finder/SKILL.md",
+      "bytes": 3690,
+      "sha256": "4f70da7ed741aecbdffa38753b7b408157e5b1fba3907220062036f23f46a2e6"
+    },
+    {
+      "path": "skills/reddit-community-finder/references/browser-session.md",
+      "bytes": 2860,
+      "sha256": "6920def98756797ae86fb83cff098cd418c8608525405fd0738c4d9ae204e30a"
+    },
+    {
+      "path": "skills/reddit-community-finder/references/community-directory.csv",
+      "bytes": 5019,
+      "sha256": "2625651e7e78ef4617ddf80d7d2279a4df7478bc90eac7f11d40721dba0889ef"
+    },
+    {
+      "path": "skills/reddit-community-finder/references/community-review.md",
+      "bytes": 1834,
+      "sha256": "47a9d4ffecc1f523b03f9258b4daeee46c3766d0d0b90fc919b44386866b4873"
+    },
+    {
+      "path": "skills/reddit-community-finder/references/reddit-account-setup.md",
+      "bytes": 1570,
+      "sha256": "96700eda3562da6205367857f0ceeaa7362445a8afb0c9033e6087c6cef93732"
+    },
+    {
+      "path": "skills/reddit-community-finder/references/top-10-starter-communities.md",
+      "bytes": 3345,
+      "sha256": "c0634094c78d17892f6f12fce2de52a9cbcd1322f2ccde27440c222f3a0aaefb"
+    },
+    {
+      "path": "templates/leads.csv",
+      "bytes": 253,
+      "sha256": "97745a74dc3563c673956ba38cd6a962746a6b575efe55eca11e39861cebf53b"
+    },
+    {
+      "path": "templates/product-brief.md",
+      "bytes": 1366,
+      "sha256": "ca6d2971e07aab4a714c9cdeaa0b397cfedb457d9e0ab9f3df5c42d923332641"
+    },
+    {
+      "path": "templates/session-plan.md",
+      "bytes": 1207,
+      "sha256": "f8e6ab0849c7ea68cfde91c083d44c3e5d62e0e7be03f5c82bff4e04bfadf550"
+    },
+    {
+      "path": "templates/tracking-plan.md",
+      "bytes": 1410,
+      "sha256": "1fc7a8638e5e120c2f8f073f4a85417c528ff31599e0856d8e817d837be7034e"
+    },
+    {
+      "path": "templates/weekly-review.md",
+      "bytes": 993,
+      "sha256": "2532bc30745ba716009500f223270df873ace30f3a90f7b04ffa80fc8c31cad9"
+    }
+  ]
+}

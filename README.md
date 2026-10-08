@@ -95,3 +95,15 @@ After installing, your agent uses the skills automatically when relevant. You ca
 ## License
 
 Apache-2.0
+
+## Automated Marketing Kit
+
+The complete customer bundle lives in [automated-marketing-kit/](automated-marketing-kit/): six skills, Claude upload ZIPs, templates, examples and [setup instructions](automated-marketing-kit/START-HERE.md).
+
+Download this repository with **Code → Download ZIP**, unzip it, and open the `automated-marketing-kit` folder. To install just the main marketing skill:
+
+```sh
+npx skills add https://github.com/CodeSpringApp/codespring-skills/tree/main/automated-marketing-kit --skill automated-marketing-toolkit
+```
+
+The standard repository-root installation remains the CodeSpring skill pack; use the kit URL above for this separate bundle.
